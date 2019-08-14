@@ -13,7 +13,7 @@ Last Modified: 	2016-08-17//11:30pm
 <config>
      <modules>
         <Melissa_Plugin>
-         <version>1.2.3</version>
+         <version>1.2.4</version>
           <depends>
             <!-- no dependencies -->
             </depends>
@@ -22,7 +22,7 @@ Last Modified: 	2016-08-17//11:30pm
 	<default>
 		<catalog>
 			<backend>                
-				<version>1.2.3</version>
+				<version>1.2.4</version>
 				<gaws>1</gaws>       
 				<gee>1</gee>
 				<email>1</email>

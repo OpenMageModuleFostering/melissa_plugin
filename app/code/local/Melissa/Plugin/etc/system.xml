@@ -10,10 +10,13 @@ Last Modified: 	2016-08-17//11:30pm
 -->
 <config>
     <tabs>
+		<!--
+		Hint: the module:Missinglobaladdress causes an error
 		<melissa translate="label" module="melissaglobaladdress">
 				<label><![CDATA[<img style="margin: 4px 4px 4px 0px;" src="https://www.melissadata.de/images/melissa-data-logo.gif" alt="Melissa Data" border="0" />]]></label>
 			<sort_order>12</sort_order>
 		</melissa>
+		-->
 	</tabs>
     <sections>
         <catalog>
