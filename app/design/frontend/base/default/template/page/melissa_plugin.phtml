@@ -4,7 +4,21 @@ Melissa Data Plugin for Magento: PHP Library
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-03//14:30pm
+Last Modified: 	2016-08-10//14:30pm
+*/
+
+/*
+$states = Mage::getModel('directory/country')->load("CA")->getRegions()->toOptionArray();
+$arr = array(); 
+$t_arr = array();
+foreach($states as $region){
+	array_push($arr, $region['title']."#".$region['value']);	   
+}  
+
+print_r($states);
+
+setcookie('states_CA_Collection', '', time()-300);   
+setcookie('states_CA_Collection', json_encode($arr), time() + 86400, "/");  
 */
 
 // read gee related config options

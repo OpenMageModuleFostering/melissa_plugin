@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2009-2015 Crafty Clicks (https://craftyclicks.co.uk)
+ * @author       Sebastian Enger / Melissa Data / MelissaData.com
+ */
+ -->
+
+<layout>
+	<!-- Ajax Time -->
+<!-	<melissaglobaladdress_ajax_index>
+		<block type="melissaglobaladdress/ajaxblock" name="root" template="page/melissa_plugin.phtml" />
+	</melissaglobaladdress_ajax_index> -->
+	<!-- after checkout validation -->
+	<!--	
+	<checkout_onepage_success>
+		<reference name="head">
+			<block type="page/html" name="cc_melissa_postcheck" template="craftyclicks/melissaglobaladdress/post_checkout.phtml"/>
+		</reference>
+	</checkout_onepage_success>
+	-->
+	<!-- checkout/registration autocomplete -->
+	<!--
+	<checkout_onepage_index>
+		<reference name="head">
+			<action method="addJs"><script>craftyclicks/melissaglobaladdress/melissadata_magento.js</script></action>
+			<action method="addCss"><stylesheet>css/craftyclicks/melissaglobaladdress/melissa_autocomplete.css</stylesheet></action>
+			<block type="page/html" name="cc_melissa_config" template="craftyclicks/melissaglobaladdress/common_config.phtml"/>
+		</reference>
+	</checkout_onepage_index>
+	-->
+</layout>
