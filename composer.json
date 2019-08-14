@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Melissa_Plugin",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "This is an autocomplete & post checkout address validation with the usage of MelissaData.",
+    "authors": [
+    {
+        "name": "Sebastian Enger",
+        "email": "Sebastian.Enger@MelissaData.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

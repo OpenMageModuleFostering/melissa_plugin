@@ -1,0 +1,142 @@
+<?php
+/*
+Melissa Data Plugin for Magento: PHP Library
+Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
+Contact:		Sebastian.Enger@MelissaData.com
+Phone: 			+49 30 80 933 178-2 
+Last Modified: 	2016-07-04:10:30am
+*/
+
+// read gee related config options
+$gee_singlelinecountries	= Mage::getStoreConfig('catalog/backend/singlelinecountries');
+$gee_use_single 			= Mage::getStoreConfig('catalog/backend/gee_use_single');
+$gee_use_multi				= Mage::getStoreConfig('catalog/backend/gee_use_multi');
+
+// read service enabled related config options
+$phone_enabled 				= Mage::getStoreConfig('catalog/backend/phone');		
+$email_enabled 				= Mage::getStoreConfig('catalog/backend/email');
+$gee_enabled 				= Mage::getStoreConfig('catalog/backend/gee');
+$gaws_enabled 				= Mage::getStoreConfig('catalog/backend/gaws');			// enable Address Verification?	
+$customer_id  				= Mage::getStoreConfig('catalog/backend/customerid');	// get Melissa Data customer ID
+
+// define Melissa Data Token related options
+$intEmail 					= "pkgIntEmail";		// email token server option
+$intName 					= "pkgIntNameCheck";	// name token server option
+$intPhone 					= "pkgIntPhoneCheck";	// phone token server option
+$intGAddr 					= "pkgIntAddressCheck";	// gaws address token server option
+$intGeo 					= "pkgIntGeoCode";		// geocode token server option
+$intGee						= "pkgExpressEntry";	// gee token server option
+$myGeoGawsOption 			= $intGAddr+","+$intGeo;
+
+// set the Token Server HTTPS endpoint
+$TokenServerEndpoint	= "https://token.melissadata.net/v3/WEB/service.svc/RequestToken?L=".$customer_id;
+
+// build the request uri for the separate tokens
+$TokenReqGee		= $TokenServerEndpoint."&P=".$intGee;
+$TokenReqGaws		= $TokenServerEndpoint."&P=".$intGAddr;
+$TokenReqEmail		= $TokenServerEndpoint."&P=".$intEmail;
+
+// get the Email token XML content
+$TokenContentEmail	= url_get_contents($TokenReqEmail);
+$tokenEmailRaw 		= new SimpleXMLElement($TokenContentEmail);
+
+// store the reals Email Token Content as string
+$tokenEmail			= (string)$tokenEmailRaw ->Token; 
+
+
+// get the GEE token XML content
+$TokenContentGee	= url_get_contents($TokenReqGee);
+$tokenGeeRaw 		= new SimpleXMLElement($TokenContentGee);
+
+// store the reals GEE Token Content as string
+$tokenGee			= (string)$tokenGeeRaw->Token;  
+
+
+// get the GAWS token XML content
+$TokenContentGaws	= url_get_contents($TokenReqGaws);
+$tokenGawsRaw 		= new SimpleXMLElement($TokenContentGaws);
+
+// store the reals GAWS Token Content as string
+$tokenGaws			= (string)$tokenGawsRaw->Token;  
+
+
+// remove all cookies
+setcookie('MelissaDataMagento_GEE_Token', '', time()-300);   
+setcookie('MelissaDataMagento_GAWS_Token', '', time()-300);   
+setcookie('MelissaDataMagento_EMAIL_Token', '', time()-300); 
+setcookie('MelissaDataMagento_GEE_SINGLEROWCOUNTRIES', '', time()-300);   
+setcookie('MelissaDataMagento_GAWS_ENABLED', '', time()-300);
+setcookie('MelissaDataMagento_GEE_ENABLED', '', time()-300);    
+setcookie('MelissaDataMagento_EMAIL_ENABLED', '', time()-300);   
+setcookie('MelissaDataMagento_GEE_SINGLEROW_ENABLED', '', time()-300);   
+setcookie('MelissaDataMagento_GEE_MULTIROW_ENABLED', '', time()-300);  
+
+// store correct token to Cookie
+setcookie('MelissaDataMagento_GEE_Token', $tokenGee, time() + (86400 * 0.75), "/"); // 80400 = 0.75 day
+setcookie('MelissaDataMagento_GAWS_Token', $tokenGaws, time() + (86400 * 0.75), "/"); 
+setcookie('MelissaDataMagento_EMAIL_Token', $tokenEmail, time() + (86400 * 0.75), "/"); 
+
+// store rest config parameters
+setcookie('MelissaDataMagento_GEE_SINGLEROWCOUNTRIES', $gee_singlelinecountries, time() + (86400 * 0.75), "/");
+setcookie('MelissaDataMagento_GAWS_ENABLED', $gaws_enabled , time() + (86400 * 0.75), "/");
+setcookie('MelissaDataMagento_GEE_ENABLED', $gee_enabled, time() + (86400 * 0.75), "/");
+setcookie('MelissaDataMagento_EMAIL_ENABLED', $email_enabled , time() + (86400 * 0.75), "/");  
+setcookie('MelissaDataMagento_GEE_SINGLEROW_ENABLED', $gee_use_single , time() + (86400 * 0.75), "/"); 
+setcookie('MelissaDataMagento_GEE_MULTIROW_ENABLED', $gee_use_multi, time() + (86400 * 0.75), "/");
+
+//$date = date('m/d/Y h:i:s a', time());
+//file_put_contents("/tmp/md_tokenserver.log", "$date :: tokensever request sent to Email: $tokenEmail - is_gee: $gee_enabled - is_gaws: $gaws_enabled - gee_use_single: $gee_use_single - gee_use_multi: $gee_use_multi - email_enabled : $email_enabled \n", FILE_APPEND | LOCK_EX);
+
+// Web Call Function with Fallback Mechnism - if no curl installed, try other options
+function url_get_contents ($url) {
+    if (function_exists('curl_exec')){ 
+	$url_get_contents_data = get_web_page( $url );	
+    }elseif(function_exists('file_get_contents')){
+        $url_get_contents_data = file_get_contents($url);
+    }elseif(function_exists('fopen') && function_exists('stream_get_contents')){
+        $handle = fopen ($url, "r");
+        $url_get_contents_data = stream_get_contents($handle);
+    }else{
+        $url_get_contents_data = false;
+    }
+return $url_get_contents_data;
+} // function url_get_contents ($url) {
+
+// PHP Curl based Web Site Fetcher
+function get_web_page( $url ){
+    $options = array(
+	CURLOPT_RETURNTRANSFER => true,     // return web page
+	CURLOPT_HEADER         => false,    // don't return headers
+	CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+	CURLOPT_ENCODING       => "utf-8",       // handle all encodings
+	CURLOPT_USERAGENT      => "Magento Plugin/MelissaData/TokenServerAccess/v0.0.1/SE", // who am i
+	CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+	CURLOPT_CONNECTTIMEOUT => 3,      // timeout on connect
+	CURLOPT_TIMEOUT        => 3,      // timeout on response
+	CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+	CURLOPT_SSL_VERIFYPEER => true,     // Enable SSL Cert checks
+    );
+
+    $ch      = curl_init( $url );
+    curl_setopt_array( $ch, $options );
+    $content = curl_exec( $ch );
+    $err     = curl_errno( $ch );
+    $errmsg  = curl_error( $ch );
+    $header  = curl_getinfo( $ch );
+    curl_close( $ch );
+    return $content;
+} // function get_web_page( $url ){
+
+/*
+$2 = Mage::getStoreConfig('melissa_plugin/singlerow_enabled');			// enable Single Row Autocompletion?
+$3 = Mage::getStoreConfig('melissa_plugin/fielded_enabled');			// enable Fielded Autocompletion?
+$4 = Mage::getStoreConfig('melissa_plugin/singlerow_countries');		// define singlerow countries
+$3 = Mage::getStoreConfig('melissa_plugin/fielded_countries');			// define fielded countries
+$3 = Mage::getStoreConfig('melissa_plugin/service_gee_enabled');		// enable Autocompletion?
+$4 = Mage::getStoreConfig('melissa_plugin/service_email_enabled');		// enable Email Check?
+$4 = Mage::getStoreConfig('melissa_plugin/service_phone_enabled');		// enable Phone Check?
+$4 = Mage::getStoreConfig('melissa_plugin/service_email_premium_enabled');	// enable Email Premium Check?
+$4 = Mage::getStoreConfig('melissa_plugin/service_phone_premium_enabled');	// enable Phone Premium Check?
+*/
+
+?>

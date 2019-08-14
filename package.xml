@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Melissa_Plugin</name>
+    <version>0.9.3</version>
+    <stability>beta</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This is an autocomplete &amp; post checkout address validation with the usage of MelissaData.</summary>
+    <description>This is an autocomplete &amp; post checkout address validation with the usage of MelissaData.</description>
+    <notes></notes>
+    <authors><author><name>Sebastian Enger</name><user>melissadata</user>
+	<email>Sebastian.Enger@MelissaData.com</email></author>
+	</authors>
+    <date>2016-07-04</date>
+    <time>11:24:03</time>
+    <contents><target name="mage"></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>7.0.0</max></php></required></dependencies>
+</package>

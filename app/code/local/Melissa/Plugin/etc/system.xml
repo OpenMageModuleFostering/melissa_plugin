@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+Melissa Data Plugin for Magento: System XML Library
+Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
+Contact:		Sebastian.Enger@MelissaData.com
+Phone: 			+49 30 80 933 178-2 
+Last Modified: 	2016-07-04:10:30am
+*/
+-->
+<config>
+    <tabs>
+		<melissa translate="label" module="melissaglobaladdress">
+				<label><![CDATA[<img style="margin: 4px 4px 4px 0px;" src="https://www.melissadata.de/images/melissa-data-logo.gif" alt="Melissa Data" border="0" />]]></label>
+			<sort_order>12</sort_order>
+		</melissa>
+	</tabs>
+    <sections>
+        <catalog>
+            <groups>
+                <backend translate="label">
+                    <label>Melissa Data Magento Plugin</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <info>
+							<label>Version</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<frontend_model>Melissa_Plugin_Block_Adminhtml_Version</frontend_model>
+						</info>
+                         <customerid translate="label">
+                            <label>Melissa Data Customer ID:</label>
+                            <comment>Please enter your Melissa Data Customer ID.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </customerid>
+                       
+                        <gaws translate="label">
+								<label>Use Address Verification:</label>
+								<comment>Enable or disable Global Address Verification.</comment>
+								<frontend_type>select</frontend_type>
+								<sort_order>2</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<source_model>adminhtml/system_config_source_yesno</source_model>
+						</gaws>
+						 <gee translate="label">
+                            <label>Use Address Autocompletion:</label>
+                            <comment>Enable or disable Global Express Entry.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </gee>
+                        
+                         <gee_use_single translate="label">
+                            <label>Single Line Autocompletion:</label>
+                            <comment>Enable or disable Global Express Entry Single Line input.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </gee_use_single>
+                        
+                         <gee_use_multi translate="label">
+                            <label>Fielded Autocompletion:</label>
+                            <comment>Enable or disable Global Express Entry fielded, multirow input.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </gee_use_multi>
+                   <!--     
+                        <singlelinecountries translate="label comment">
+                            <label>List of Countries for Single Line:</label>
+                            <comment>Use Single Line Autocompletion for those countries.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </singlelinecountries>
+                   -->                             
+                        <email translate="label">
+                            <label>Use Email Verification:</label>
+                            <comment>Enable Email Validation on Checkout.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </email>
+                  <!--    
+                        <phone translate="label">
+                            <label>Use Phone Verification: </label>
+                            <comment>Enable Phone Validation on Checkout.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </phone>
+                   --> 
+                      </fields>
+                 </backend>              
+            </groups>
+        </catalog>
+    </sections>
+</config>

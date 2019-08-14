@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+<!--==============================================
+Default layout, loads most of the pages
+===============================================-->
+    <default>
+	 <reference name="root">
+          <!-- <block type="core/template" name="custom_title" template="page/melissa_plugin.phtml" /> --> <!-- Token Server Support -->
+		<block type="core/text_list" name="newreference" as="newreference"/>        
+	</reference>
+	<reference name="newreference">
+	   <block type="core/template" name="newReferenceBlock" template="page/melissa_plugin.phtml" />
+	</reference>
+    </default>
+<!--==============================================
+END Default
+===============================================-->
+</layout>
+
+
