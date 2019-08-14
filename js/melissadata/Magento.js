@@ -3,7 +3,7 @@ Melissa Data Javascript Library for Magento Plugin
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-17//11:30pm
+Last Modified: 	2016-09-05//11:30pm
 */
 
 //$.noConflict();
@@ -58,7 +58,7 @@ z(document).ready(function() {
 		var is_email_enabled					= Cookies.get('MelissaDataMagento_EMAIL_ENABLED');
 		var is_gaws_enabled						= Cookies.get('MelissaDataMagento_GAWS_ENABLED');
 		var is_gee_enabled 						= Cookies.get('MelissaDataMagento_GEE_ENABLED');
-		var gee_singlerow_country				= Cookies.get('MelissaDataMagento_GEE_SINGLEROWCOUNTRIES'); // not yet implemented
+	//	var gee_singlerow_country				= Cookies.get('MelissaDataMagento_GEE_SINGLEROWCOUNTRIES'); // not yet implemented
 		
 		var gee_use_single 						= Cookies.get('MelissaDataMagento_GEE_SINGLEROW_ENABLED');
 		var gee_use_multi 						= Cookies.get('MelissaDataMagento_GEE_MULTIROW_ENABLED');
@@ -71,7 +71,7 @@ z(document).ready(function() {
 		var n_gaws 								= is_gaws_enabled.includes("1");
 		var n_email								= is_email_enabled.includes("1");
 		
-		var resCountry 							= gee_singlerow_country.split(","); 
+	//	var resCountry 							= gee_singlerow_country.split(","); 
 		
 		//console.log("GEE multi: "+n_gee_multi + " Cookie Gee Mutli: " +gee_use_multi);
 		
@@ -100,7 +100,7 @@ z(document).ready(function() {
 		
 		var insert_string_single_tabs = '<div id="London" class="tabcontent"><br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="singleShow">Melissa Data Single Row Autocompletion</b></tr><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Type Address" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showAddressSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /></div>';
 		
-		var insert_string_multi_tabs = '<div id="Paris" class="tabcontent"><br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="multiShow">Melissa Data Fielded Autocompletion</b></tr><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Type Street Address" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="4. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></tr></table></p><br /><br /><p></div>';
+		var insert_string_multi_tabs = '<div id="Paris" class="tabcontent"><br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="multiShow">Melissa Data Fielded Autocompletion</b></tr><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Type Street Address" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+(MAX_LENGTH_GEE_FIELDED_BLOCK+40)+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="4. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSuggestions" style="width: '+(MAX_LENGTH_GEE_FIELDED_BLOCK-47)+'px;" /><span id="showSubPremise" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></tr></table></p><br /><br /><p></div>';
 			
 		var show_tabs = "<ul class=\"tab\"><li><a href=\"#\" class=\"tablinks\" onclick=\"openMDElement(event, 'London')\">Single Row Autocompletion</a></li><li><a href=\"#\" class=\"tablinks\" onclick=\"openMDElement(event, 'Paris')\">Fielded Autocompletion</a></li></ul>";
 				
@@ -178,6 +178,16 @@ z(document).ready(function() {
 			// set display to SHOW content
 			z("#checkout-step-billing").css("display", "inline");
 			z( show_tabs ).insertBefore("#checkout-step-billing");
+			
+			z("#singleShow").show();
+			z("#singleShow").css("display", "inline");
+			z("#autocomplete_melissadata_singlerow").show();
+			z("#autocomplete_melissadata_singlerow").css("display", "inline");	
+			
+			z("#multiShow").show();
+			z("#multiShow").css("display", "inline");
+			z("#autocomplete_melissadata_fielded").show();
+			z("#autocomplete_melissadata_fielded").css("display", "inline");
 				
 			if ( n_gee_single === true) { 
 				z( insert_string_single_tabs ).insertBefore("#checkout-step-billing");
@@ -561,7 +571,7 @@ z(document).ready(function() {
 				b = b.filter(function(e){return e}); 
 				var b_html 	= b.join(",");
 								
-				console.log("GB Postalcode: #showStreetResults " + postalcode);
+				//console.log("GB Postalcode: #showStreetResults " + postalcode);
 				
 				z("#billing\\:street1").val(a_html);
 				z("#billing\\:street2").val(b_html);
@@ -577,7 +587,7 @@ z(document).ready(function() {
 			
 			} else { // all other countries
 				
-				console.log("not GB Postalcode: #showStreetResults " + postalcode);
+			//	console.log("not GB Postalcode: #showStreetResults " + postalcode);
 				z("#billing\\:city").val(locality);
 				z("#billing\\:postcode").val(postalcode);
 				z("#billing\\:street1").val(deliveryaddr);
@@ -995,7 +1005,7 @@ z(document).ready(function() {
 								premise		= o.Premise;
 								tn			= o.Thoroughfare;
 						
-								console.log("sub building:" +subbuilding);
+								//console.log("sub building:" +subbuilding);
 								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
 									if (parts_addr_count >= 0){
 										parts_addr.push('<option selected value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
@@ -1047,8 +1057,8 @@ z(document).ready(function() {
 			delay: 			250,
 			source: function( request, response ){
 				z.ajax({
-				  url: 		urlGeePC_Real,
-				  dataType: "jsonp",
+				  url: 				urlGeePC_Real,
+				  dataType: 		"jsonp",
 				  data: {
 					maxrecords: 	MAX_SHOW_RESULTS,
 					postalcode: 	z("#PostalCodeSuggestions").val(),
@@ -1077,7 +1087,7 @@ z(document).ready(function() {
 						arr_pc_options.push('</select>');
 						var pc_html 	= arr_pc_options.join("");
 						
-						//console.log("POSTALCOOOODEEE: " + pc_html);
+						//console.log("POSTALCOOOODEEE: " + string2); die();
 						
 						z("#showPostalCodeResults").html("");
 						z("#showPostalCodeResults").val("");
@@ -1095,7 +1105,8 @@ z(document).ready(function() {
 							
 							for (i in o) {
 								//pc 		= o.PostalCodePrimary; // hier ansetzen: 
-								pc 		= o.PostalCode; 
+								//pc 		= o.PostalCode; 
+								pc		= o.PostalCodePrimary; 
 								lc 		= o.Locality;
 								aarea 	= o.AdministrativeArea;
 								premise	= o.Premise;
@@ -1105,9 +1116,12 @@ z(document).ready(function() {
 									pc	= o.PostalCodePrimary; 
 								}
 								
-								console.log("POSTALCOOOODEEE: " +pc+" locality: "+lc +"country: "+cntry);
+								//console.log("PRE POSTALCOOOODEEE: " +pc+" locality: "+lc + "Count: "+parts_pc_count);
 								if (((typeof pc != "undefined") && (typeof pc.valueOf() == "string")) && (pc.length > 0) && ((typeof lc != "undefined") && (typeof lc.valueOf() == "string")) && (lc.length > 0)) {
-									if (parts_pc_count >= 0){
+								//if (((typeof pc != "undefined") && (typeof pc.valueOf() == "int")) && ((typeof lc != "undefined") && (typeof lc.valueOf() == "string")) ) {
+								//if ( (typeof pc != "undefined") && (typeof lc != "undefined") ) {	
+								//	console.log("INSIDE POSTALCOOOODEEE: " +pc+" locality: "+lc + "Count: "+parts_pc_count);
+									if (parts_pc_count >= 0){		
 										parts_pc.push('<option selected value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
 										parts_pc_count++;
 									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){

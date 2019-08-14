@@ -9,13 +9,21 @@ Last Modified: 	2016-08-17//11:30pm
 
 /*
 $states = Mage::getModel('directory/country')->load("CA")->getRegions()->toOptionArray();
+
 $arr = array(); 
 $t_arr = array();
 foreach($states as $region){
-	array_push($arr, $region['title']."#".$region['value']);	   
+	array_push($arr, $region['title']."=>".$region['value']);	   
 }  
 
+echo "Raw dump: <br /><br />";
+echo "<pre>";
 print_r($states);
+echo "</pre>";
+
+echo "<br /><br />Canadian Regions dump: <br /><br />";
+print_r($arr);
+
 
 setcookie('states_CA_Collection', '', time()-300);   
 setcookie('states_CA_Collection', json_encode($arr), time() + 86400, "/");  

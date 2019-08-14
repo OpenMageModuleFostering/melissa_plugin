@@ -1,0 +1,117 @@
+<?php
+/*
+Melissa Data Plugin for Magento
+Author: Sebastian Enger
+Contact: Sebastian.Enger@MelissaData.com
+Phone: +49 30 80 933 178-2 
+Last Modified: 2016-06-03::12am
+*/
+
+/*
+$1 = Mage::getStoreConfig('melissa_plugin/customerid');				// get Melissa Data customer ID
+
+$2 = Mage::getStoreConfig('melissa_plugin/singlerow_enabled');			// enable Single Row Autocompletion?
+$3 = Mage::getStoreConfig('melissa_plugin/fielded_enabled');			// enable Fielded Autocompletion?
+
+$4 = Mage::getStoreConfig('melissa_plugin/singlerow_countries');		// define singlerow countries
+$3 = Mage::getStoreConfig('melissa_plugin/fielded_countries');			// define fielded countries
+
+$4 = Mage::getStoreConfig('melissa_plugin/service_gaws_enabled');		// enable Address Verification?	
+$3 = Mage::getStoreConfig('melissa_plugin/service_gee_enabled');		// enable Autocompletion?
+$4 = Mage::getStoreConfig('melissa_plugin/service_email_enabled');		// enable Email Check?
+$4 = Mage::getStoreConfig('melissa_plugin/service_phone_enabled');		// enable Phone Check?
+
+$4 = Mage::getStoreConfig('melissa_plugin/service_email_premium_enabled');	// enable Email Premium Check?
+$4 = Mage::getStoreConfig('melissa_plugin/service_phone_premium_enabled');	// enable Phone Premium Check?
+*/
+
+$customer_id 		= "111466882"; 			// Melissa Data Customer ID of Sebastian Enger
+
+$intEmail 		= "pkgIntEmail";		// email token server option
+$intName 		= "pkgIntNameCheck";		// name token server option
+$intPhone 		= "pkgIntPhoneCheck";		// phone token server option
+$intGAddr 		= "pkgIntAddressCheck";		// gaws address token server option
+$intGeo 		= "pkgIntGeoCode";		// geocode token server option
+$intGee			= "pkgExpressEntry";		// gee token server option
+$myGeoGawsOption 	= $intGAddr+","+$intGeo;
+
+// set the Token Server HTTPS endpoint
+$TokenServerEndpoint	= "https://token.melissadata.net/v3/WEB/service.svc/RequestToken?L=".$customer_id;
+
+// build the request uri for the separate tokens
+$TokenReqGee		= $TokenServerEndpoint."&P=".$intGee;
+$TokenReqGaws		= $TokenServerEndpoint."&P=".$intGAddr;
+
+// get the GEE token XML content
+$TokenContentGee	= url_get_contents($TokenReqGee);
+$tokenGeeRaw 		= new SimpleXMLElement($TokenContentGee);
+
+// store the reals GEE Token Content as string
+$tokenGee		= (string)$tokenGeeRaw->Token;  
+
+// get the GAWS token XML content
+$TokenContentGaws	= url_get_contents($TokenReqGaws);
+$tokenGawsRaw 		= new SimpleXMLElement($TokenContentGaws);
+
+// store the reals GAWS Token Content as string
+$tokenGaws		= (string)$tokenGawsRaw->Token;  
+
+setcookie('MelissaDataMagento_GEE_Token', $tokenGee, time() + (86400 * 0.75), "/"); // 80400 = 0.75 day
+setcookie('MelissaDataMagento_GAWS_Token', $tokenGaws, time() + (86400 * 30), "/"); // 80400 = 0.75 day
+
+$date = date('m/d/Y h:i:s a', time());
+file_put_contents("/tmp/md_tokenserver.log", "$date :: tokensever request sent to GAWS & GEE: $tokenGaws\n", FILE_APPEND | LOCK_EX);
+
+/*
+echo <<<END
+	<script>
+		alert('<?php echo "$tokenGee"; ?>');
+	</script>
+	<script>
+		//alert("token server gaws kommt"+$tokenGaws);
+		console.log("token from Token Server MD Backend:"+$tokenGee);
+	</script>
+END;
+*/
+
+function url_get_contents ($url) {
+    if (function_exists('curl_exec')){ 
+	$url_get_contents_data = get_web_page( $url );	
+    }elseif(function_exists('file_get_contents')){
+        $url_get_contents_data = file_get_contents($url);
+    }elseif(function_exists('fopen') && function_exists('stream_get_contents')){
+        $handle = fopen ($url, "r");
+        $url_get_contents_data = stream_get_contents($handle);
+    }else{
+        $url_get_contents_data = false;
+    }
+return $url_get_contents_data;
+} // function url_get_contents ($url) {
+
+
+function get_web_page( $url ){
+    $options = array(
+	CURLOPT_RETURNTRANSFER => true,     // return web page
+	CURLOPT_HEADER         => false,    // don't return headers
+	CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+	CURLOPT_ENCODING       => "utf-8",       // handle all encodings
+	CURLOPT_USERAGENT      => "Magento Plugin/MelissaData/TokenServerAccess/v0.0.1", // who am i
+	CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+	CURLOPT_CONNECTTIMEOUT => 3,      // timeout on connect
+	CURLOPT_TIMEOUT        => 3,      // timeout on response
+	CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+	CURLOPT_SSL_VERIFYPEER => true,     // Enable SSL Cert checks
+    );
+
+    $ch      = curl_init( $url );
+    curl_setopt_array( $ch, $options );
+    $content = curl_exec( $ch );
+    $err     = curl_errno( $ch );
+    $errmsg  = curl_error( $ch );
+    $header  = curl_getinfo( $ch );
+    curl_close( $ch );
+    return $content;
+}
+
+
+?>
