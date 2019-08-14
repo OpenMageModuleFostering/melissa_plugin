@@ -6,10 +6,13 @@
 	 <!--	<action method="addJs"><script>melissadata/jquery-ui.min.js</script></action> -->
 	 <!--	<action method="addJs"><script>melissadata/js.cookie.min.js</script></action> -->
 	 	<action method="addJs">
-			<script>melissadata/Magento.min.js</script>
+			<script>melissadata/Magento.js</script>
 			<params><![CDATA[name="js9999_last"]]></params>
 		</action>
-		 <block type="core/template" name="newReferenceBlock" template="page/melissa_plugin.phtml" />  
+		<action method="addCss">
+			<script>melissadata/Magento.css</script>
+		</action>
+		<block type="core/template" name="newReferenceBlock" template="page/melissa_plugin.phtml" />  
         </reference>
 <!--	 
 	<reference name="root">
