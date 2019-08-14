@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!-- app/design/frontend/base/default/layout/my_layoutmods.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Global Layout Overrides to add custom structure blocks to layout template files
+ *
+ * @category    My
+ * @package     My_LayoutMods
+ * @copyright   Copyright (c) 2013 August Ash, Inc. (http://www.augustash.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+<!--==============================================
+Default layout, loads most of the pages
+===============================================-->
+    <default>
+        <reference name="root">
+            <!--
+            ========================================================================
+            NEW BLOCK REFERENCE: custom_title
+            client's custom layout for title, desc, etc. above layered navigation
+            ========================================================================
+            -->
+            <block type="core/text_list" name="custom_title" as="custom_title" translate="label">
+                <label>Custom Title</label>
+            </block>
+        </reference>
+    </default>
+<!--==============================================
+END Default
+===============================================-->
+
+<!--==============================================
+Catalog.xml
+===============================================-->
+    <catalog_custom>
+        <reference name="root">
+            <!-- Change category page(s) layout to 2 columns left -->
+            <action method="setTemplate"><template>page/hybrid-2columns-left.phtml</template></action>
+        </reference>
+
+        <!--
+        ========================================================================
+        Client's custom layout for title, desc, etc. above layered navigation
+        ========================================================================
+        -->
+        <reference name="custom_title">
+            <block type="core/template" name="custom_title_block" template="catalog/category/custom_title.phtml" />
+        </reference>
+    </catalog_custom>
+
+    <catalog_category_default translate="label">
+        <!-- Update category default with catalog custom -->
+        <update handle="catalog_custom" />
+    </catalog_category_default>
+
+    <catalog_category_layered translate="label">
+        <!-- Update category default with catalog custom -->
+        <update handle="catalog_custom" />
+    </catalog_category_layered>
+<!--==============================================
+END Catalog.xml
+===============================================-->
+
+
+<!--==============================================
+Catalogsearch.xml
+===============================================-->
+    <catalogsearch_custom>
+        <reference name="root">
+            <!-- Change category page(s) layout to 2 columns left -->
+            <action method="setTemplate"><template>page/hybrid-2columns-left.phtml</template></action>
+        </reference>
+    </catalogsearch_custom>
+
+    <catalogsearch_result_index translate="label">
+        <!-- Update catalog search with catalogsearch custom -->
+        <update handle="catalogsearch_custom" />
+    </catalogsearch_result_index>
+
+    <catalogsearch_advanced_index translate="label">
+        <!-- Update catalog advanced search with catalogsearch custom -->
+        <update handle="catalogsearch_custom" />
+    </catalogsearch_advanced_index>
+<!--==============================================
+END Catalogsearch.xml
+===============================================-->
+</layout>
+
+

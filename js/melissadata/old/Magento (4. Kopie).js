@@ -1,11 +1,3 @@
-/*
-Melissa Data Javascript Library for Magento Plugin
-Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
-Contact:		Sebastian.Enger@MelissaData.com
-Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-01//10:30pm
-*/
-
 //$.noConflict();
 /*! jQuery v2.2.4 | (c) jQuery Foundation | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=a.document,e=c.slice,f=c.concat,g=c.push,h=c.indexOf,i={},j=i.toString,k=i.hasOwnProperty,l={},m="2.2.4",n=function(a,b){return new n.fn.init(a,b)},o=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,p=/^-ms-/,q=/-([\da-z])/gi,r=function(a,b){return b.toUpperCase()};n.fn=n.prototype={jquery:m,constructor:n,selector:"",length:0,toArray:function(){return e.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:e.call(this)},pushStack:function(a){var b=n.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a){return n.each(this,a)},map:function(a){return this.pushStack(n.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(e.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor()},push:g,sort:c.sort,splice:c.splice},n.extend=n.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||n.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(a=arguments[h]))for(b in a)c=g[b],d=a[b],g!==d&&(j&&d&&(n.isPlainObject(d)||(e=n.isArray(d)))?(e?(e=!1,f=c&&n.isArray(c)?c:[]):f=c&&n.isPlainObject(c)?c:{},g[b]=n.extend(j,f,d)):void 0!==d&&(g[b]=d));return g},n.extend({expando:"jQuery"+(m+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===n.type(a)},isArray:Array.isArray,isWindow:function(a){return null!=a&&a===a.window},isNumeric:function(a){var b=a&&a.toString();return!n.isArray(a)&&b-parseFloat(b)+1>=0},isPlainObject:function(a){var b;if("object"!==n.type(a)||a.nodeType||n.isWindow(a))return!1;if(a.constructor&&!k.call(a,"constructor")&&!k.call(a.constructor.prototype||{},"isPrototypeOf"))return!1;for(b in a);return void 0===b||k.call(a,b)},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?i[j.call(a)]||"object":typeof a},globalEval:function(a){var b,c=eval;a=n.trim(a),a&&(1===a.indexOf("use strict")?(b=d.createElement("script"),b.text=a,d.head.appendChild(b).parentNode.removeChild(b)):c(a))},camelCase:function(a){return a.replace(p,"ms-").replace(q,r)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b){var c,d=0;if(s(a)){for(c=a.length;c>d;d++)if(b.call(a[d],d,a[d])===!1)break}else for(d in a)if(b.call(a[d],d,a[d])===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(o,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(s(Object(a))?n.merge(c,"string"==typeof a?[a]:a):g.call(c,a)),c},inArray:function(a,b,c){return null==b?-1:h.call(b,a,c)},merge:function(a,b){for(var c=+b.length,d=0,e=a.length;c>d;d++)a[e++]=b[d];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,e,g=0,h=[];if(s(a))for(d=a.length;d>g;g++)e=b(a[g],g,c),null!=e&&h.push(e);else for(g in a)e=b(a[g],g,c),null!=e&&h.push(e);return f.apply([],h)},guid:1,proxy:function(a,b){var c,d,f;return"string"==typeof b&&(c=a[b],b=a,a=c),n.isFunction(a)?(d=e.call(arguments,2),f=function(){return a.apply(b||this,d.concat(e.call(arguments)))},f.guid=a.guid=a.guid||n.guid++,f):void 0},now:Date.now,support:l}),"function"==typeof Symbol&&(n.fn[Symbol.iterator]=c[Symbol.iterator]),n.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(a,b){i["[object "+b+"]"]=b.toLowerCase()});function s(a){var b=!!a&&"length"in a&&a.length,c=n.type(a);return"function"===c||n.isWindow(a)?!1:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var t=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ga(),z=ga(),A=ga(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+M+"))|)"+L+"*\\]",O=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+N+")*)|.*)\\)|)",P=new RegExp(L+"+","g"),Q=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),R=new RegExp("^"+L+"*,"+L+"*"),S=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),T=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),U=new RegExp(O),V=new RegExp("^"+M+"$"),W={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M+"|[*])"),ATTR:new RegExp("^"+N),PSEUDO:new RegExp("^"+O),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},X=/^(?:input|select|textarea|button)$/i,Y=/^h\d$/i,Z=/^[^{]+\{\s*\[native \w/,$=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,_=/[+~]/,aa=/'|\\/g,ba=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),ca=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},da=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(ea){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function fa(a,b,d,e){var f,h,j,k,l,o,r,s,w=b&&b.ownerDocument,x=b?b.nodeType:9;if(d=d||[],"string"!=typeof a||!a||1!==x&&9!==x&&11!==x)return d;if(!e&&((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,p)){if(11!==x&&(o=$.exec(a)))if(f=o[1]){if(9===x){if(!(j=b.getElementById(f)))return d;if(j.id===f)return d.push(j),d}else if(w&&(j=w.getElementById(f))&&t(b,j)&&j.id===f)return d.push(j),d}else{if(o[2])return H.apply(d,b.getElementsByTagName(a)),d;if((f=o[3])&&c.getElementsByClassName&&b.getElementsByClassName)return H.apply(d,b.getElementsByClassName(f)),d}if(c.qsa&&!A[a+" "]&&(!q||!q.test(a))){if(1!==x)w=b,s=a;else if("object"!==b.nodeName.toLowerCase()){(k=b.getAttribute("id"))?k=k.replace(aa,"\\$&"):b.setAttribute("id",k=u),r=g(a),h=r.length,l=V.test(k)?"#"+k:"[id='"+k+"']";while(h--)r[h]=l+" "+qa(r[h]);s=r.join(","),w=_.test(a)&&oa(b.parentNode)||b}if(s)try{return H.apply(d,w.querySelectorAll(s)),d}catch(y){}finally{k===u&&b.removeAttribute("id")}}}return i(a.replace(Q,"$1"),b,d,e)}function ga(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ha(a){return a[u]=!0,a}function ia(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ja(a,b){var c=a.split("|"),e=c.length;while(e--)d.attrHandle[c[e]]=b}function ka(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function la(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function na(a){return ha(function(b){return b=+b,ha(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function oa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=fa.support={},f=fa.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=fa.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=n.documentElement,p=!f(n),(e=n.defaultView)&&e.top!==e&&(e.addEventListener?e.addEventListener("unload",da,!1):e.attachEvent&&e.attachEvent("onunload",da)),c.attributes=ia(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ia(function(a){return a.appendChild(n.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=Z.test(n.getElementsByClassName),c.getById=ia(function(a){return o.appendChild(a).id=u,!n.getElementsByName||!n.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ba,ca);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ba,ca);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return"undefined"!=typeof b.getElementsByClassName&&p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=Z.test(n.querySelectorAll))&&(ia(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\r\\' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ia(function(a){var b=n.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=Z.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ia(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",O)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=Z.test(o.compareDocumentPosition),t=b||Z.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===n||a.ownerDocument===v&&t(v,a)?-1:b===n||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,g=[a],h=[b];if(!e||!f)return a===n?-1:b===n?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return ka(a,b);c=a;while(c=c.parentNode)g.unshift(c);c=b;while(c=c.parentNode)h.unshift(c);while(g[d]===h[d])d++;return d?ka(g[d],h[d]):g[d]===v?-1:h[d]===v?1:0},n):n},fa.matches=function(a,b){return fa(a,null,null,b)},fa.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(T,"='$1']"),c.matchesSelector&&p&&!A[b+" "]&&(!r||!r.test(b))&&(!q||!q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return fa(b,n,null,[a]).length>0},fa.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},fa.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},fa.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},fa.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=fa.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=fa.selectors={cacheLength:50,createPseudo:ha,match:W,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ba,ca),a[3]=(a[3]||a[4]||a[5]||"").replace(ba,ca),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||fa.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&fa.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return W.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&U.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ba,ca).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=fa.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(P," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h,t=!1;if(q){if(f){while(p){m=b;while(m=m[p])if(h?m.nodeName.toLowerCase()===r:1===m.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){m=q,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n&&j[2],m=n&&q.childNodes[n];while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if(1===m.nodeType&&++t&&m===b){k[a]=[w,n,t];break}}else if(s&&(m=b,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n),t===!1)while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if((h?m.nodeName.toLowerCase()===r:1===m.nodeType)&&++t&&(s&&(l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),k[a]=[w,t]),m===b))break;return t-=e,t===d||t%d===0&&t/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||fa.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ha(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ha(function(a){var b=[],c=[],d=h(a.replace(Q,"$1"));return d[u]?ha(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ha(function(a){return function(b){return fa(a,b).length>0}}),contains:ha(function(a){return a=a.replace(ba,ca),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ha(function(a){return V.test(a||"")||fa.error("unsupported lang: "+a),a=a.replace(ba,ca).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Y.test(a.nodeName)},input:function(a){return X.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:na(function(){return[0]}),last:na(function(a,b){return[b-1]}),eq:na(function(a,b,c){return[0>c?c+b:c]}),even:na(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:na(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:na(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:na(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=la(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=ma(b);function pa(){}pa.prototype=d.filters=d.pseudos,d.setFilters=new pa,g=fa.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){c&&!(e=R.exec(h))||(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=S.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(Q," ")}),h=h.slice(c.length));for(g in d.filter)!(e=W[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?fa.error(a):z(a,i).slice(0)};function qa(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function ra(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j,k=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(j=b[u]||(b[u]={}),i=j[b.uniqueID]||(j[b.uniqueID]={}),(h=i[d])&&h[0]===w&&h[1]===f)return k[2]=h[2];if(i[d]=k,k[2]=a(b,c,g))return!0}}}function sa(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ta(a,b,c){for(var d=0,e=b.length;e>d;d++)fa(a,b[d],c);return c}function ua(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(c&&!c(f,d,e)||(g.push(f),j&&b.push(h)));return g}function va(a,b,c,d,e,f){return d&&!d[u]&&(d=va(d)),e&&!e[u]&&(e=va(e,f)),ha(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ta(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:ua(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=ua(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=ua(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function wa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=ra(function(a){return a===b},h,!0),l=ra(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[ra(sa(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return va(i>1&&sa(m),i>1&&qa(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(Q,"$1"),c,e>i&&wa(a.slice(i,e)),f>e&&wa(a=a.slice(e)),f>e&&qa(a))}m.push(c)}return sa(m)}function xa(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,o,q,r=0,s="0",t=f&&[],u=[],v=j,x=f||e&&d.find.TAG("*",k),y=w+=null==v?1:Math.random()||.1,z=x.length;for(k&&(j=g===n||g||k);s!==z&&null!=(l=x[s]);s++){if(e&&l){o=0,g||l.ownerDocument===n||(m(l),h=!p);while(q=a[o++])if(q(l,g||n,h)){i.push(l);break}k&&(w=y)}c&&((l=!q&&l)&&r--,f&&t.push(l))}if(r+=s,c&&s!==r){o=0;while(q=b[o++])q(t,u,g,h);if(f){if(r>0)while(s--)t[s]||u[s]||(u[s]=F.call(i));u=ua(u)}H.apply(i,u),k&&!f&&u.length>0&&r+b.length>1&&fa.uniqueSort(i)}return k&&(w=y,j=v),t};return c?ha(f):f}return h=fa.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=wa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,xa(e,d)),f.selector=a}return f},i=fa.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ba,ca),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=W.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ba,ca),_.test(j[0].type)&&oa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&qa(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,!b||_.test(a)&&oa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ia(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ia(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ja("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ia(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ja("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ia(function(a){return null==a.getAttribute("disabled")})||ja(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),fa}(a);n.find=t,n.expr=t.selectors,n.expr[":"]=n.expr.pseudos,n.uniqueSort=n.unique=t.uniqueSort,n.text=t.getText,n.isXMLDoc=t.isXML,n.contains=t.contains;var u=function(a,b,c){var d=[],e=void 0!==c;while((a=a[b])&&9!==a.nodeType)if(1===a.nodeType){if(e&&n(a).is(c))break;d.push(a)}return d},v=function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c},w=n.expr.match.needsContext,x=/^<([\w-]+)\s*\/?>(?:<\/\1>|)$/,y=/^.[^:#\[\.,]*$/;function z(a,b,c){if(n.isFunction(b))return n.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return n.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(y.test(b))return n.filter(b,a,c);b=n.filter(b,a)}return n.grep(a,function(a){return h.call(b,a)>-1!==c})}n.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?n.find.matchesSelector(d,a)?[d]:[]:n.find.matches(a,n.grep(b,function(a){return 1===a.nodeType}))},n.fn.extend({find:function(a){var b,c=this.length,d=[],e=this;if("string"!=typeof a)return this.pushStack(n(a).filter(function(){for(b=0;c>b;b++)if(n.contains(e[b],this))return!0}));for(b=0;c>b;b++)n.find(a,e[b],d);return d=this.pushStack(c>1?n.unique(d):d),d.selector=this.selector?this.selector+" "+a:a,d},filter:function(a){return this.pushStack(z(this,a||[],!1))},not:function(a){return this.pushStack(z(this,a||[],!0))},is:function(a){return!!z(this,"string"==typeof a&&w.test(a)?n(a):a||[],!1).length}});var A,B=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,C=n.fn.init=function(a,b,c){var e,f;if(!a)return this;if(c=c||A,"string"==typeof a){if(e="<"===a[0]&&">"===a[a.length-1]&&a.length>=3?[null,a,null]:B.exec(a),!e||!e[1]&&b)return!b||b.jquery?(b||c).find(a):this.constructor(b).find(a);if(e[1]){if(b=b instanceof n?b[0]:b,n.merge(this,n.parseHTML(e[1],b&&b.nodeType?b.ownerDocument||b:d,!0)),x.test(e[1])&&n.isPlainObject(b))for(e in b)n.isFunction(this[e])?this[e](b[e]):this.attr(e,b[e]);return this}return f=d.getElementById(e[2]),f&&f.parentNode&&(this.length=1,this[0]=f),this.context=d,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):n.isFunction(a)?void 0!==c.ready?c.ready(a):a(n):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),n.makeArray(a,this))};C.prototype=n.fn,A=n(d);var D=/^(?:parents|prev(?:Until|All))/,E={children:!0,contents:!0,next:!0,prev:!0};n.fn.extend({has:function(a){var b=n(a,this),c=b.length;return this.filter(function(){for(var a=0;c>a;a++)if(n.contains(this,b[a]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=w.test(a)||"string"!=typeof a?n(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&n.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?n.uniqueSort(f):f)},index:function(a){return a?"string"==typeof a?h.call(n(a),this[0]):h.call(this,a.jquery?a[0]:a):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(n.uniqueSort(n.merge(this.get(),n(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function F(a,b){while((a=a[b])&&1!==a.nodeType);return a}n.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return u(a,"parentNode")},parentsUntil:function(a,b,c){return u(a,"parentNode",c)},next:function(a){return F(a,"nextSibling")},prev:function(a){return F(a,"previousSibling")},nextAll:function(a){return u(a,"nextSibling")},prevAll:function(a){return u(a,"previousSibling")},nextUntil:function(a,b,c){return u(a,"nextSibling",c)},prevUntil:function(a,b,c){return u(a,"previousSibling",c)},siblings:function(a){return v((a.parentNode||{}).firstChild,a)},children:function(a){return v(a.firstChild)},contents:function(a){return a.contentDocument||n.merge([],a.childNodes)}},function(a,b){n.fn[a]=function(c,d){var e=n.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=n.filter(d,e)),this.length>1&&(E[a]||n.uniqueSort(e),D.test(a)&&e.reverse()),this.pushStack(e)}});var G=/\S+/g;function H(a){var b={};return n.each(a.match(G)||[],function(a,c){b[c]=!0}),b}n.Callbacks=function(a){a="string"==typeof a?H(a):n.extend({},a);var b,c,d,e,f=[],g=[],h=-1,i=function(){for(e=a.once,d=b=!0;g.length;h=-1){c=g.shift();while(++h<f.length)f[h].apply(c[0],c[1])===!1&&a.stopOnFalse&&(h=f.length,c=!1)}a.memory||(c=!1),b=!1,e&&(f=c?[]:"")},j={add:function(){return f&&(c&&!b&&(h=f.length-1,g.push(c)),function d(b){n.each(b,function(b,c){n.isFunction(c)?a.unique&&j.has(c)||f.push(c):c&&c.length&&"string"!==n.type(c)&&d(c)})}(arguments),c&&!b&&i()),this},remove:function(){return n.each(arguments,function(a,b){var c;while((c=n.inArray(b,f,c))>-1)f.splice(c,1),h>=c&&h--}),this},has:function(a){return a?n.inArray(a,f)>-1:f.length>0},empty:function(){return f&&(f=[]),this},disable:function(){return e=g=[],f=c="",this},disabled:function(){return!f},lock:function(){return e=g=[],c||(f=c=""),this},locked:function(){return!!e},fireWith:function(a,c){return e||(c=c||[],c=[a,c.slice?c.slice():c],g.push(c),b||i()),this},fire:function(){return j.fireWith(this,arguments),this},fired:function(){return!!d}};return j},n.extend({Deferred:function(a){var b=[["resolve","done",n.Callbacks("once memory"),"resolved"],["reject","fail",n.Callbacks("once memory"),"rejected"],["notify","progress",n.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return n.Deferred(function(c){n.each(b,function(b,f){var g=n.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&n.isFunction(a.promise)?a.promise().progress(c.notify).done(c.resolve).fail(c.reject):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?n.extend(a,d):d}},e={};return d.pipe=d.then,n.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=e.call(arguments),d=c.length,f=1!==d||a&&n.isFunction(a.promise)?d:0,g=1===f?a:n.Deferred(),h=function(a,b,c){return function(d){b[a]=this,c[a]=arguments.length>1?e.call(arguments):d,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(d>1)for(i=new Array(d),j=new Array(d),k=new Array(d);d>b;b++)c[b]&&n.isFunction(c[b].promise)?c[b].promise().progress(h(b,j,i)).done(h(b,k,c)).fail(g.reject):--f;return f||g.resolveWith(k,c),g.promise()}});var I;n.fn.ready=function(a){return n.ready.promise().done(a),this},n.extend({isReady:!1,readyWait:1,holdReady:function(a){a?n.readyWait++:n.ready(!0)},ready:function(a){(a===!0?--n.readyWait:n.isReady)||(n.isReady=!0,a!==!0&&--n.readyWait>0||(I.resolveWith(d,[n]),n.fn.triggerHandler&&(n(d).triggerHandler("ready"),n(d).off("ready"))))}});function J(){d.removeEventListener("DOMContentLoaded",J),a.removeEventListener("load",J),n.ready()}n.ready.promise=function(b){return I||(I=n.Deferred(),"complete"===d.readyState||"loading"!==d.readyState&&!d.documentElement.doScroll?a.setTimeout(n.ready):(d.addEventListener("DOMContentLoaded",J),a.addEventListener("load",J))),I.promise(b)},n.ready.promise();var K=function(a,b,c,d,e,f,g){var h=0,i=a.length,j=null==c;if("object"===n.type(c)){e=!0;for(h in c)K(a,b,h,c[h],!0,f,g)}else if(void 0!==d&&(e=!0,n.isFunction(d)||(g=!0),j&&(g?(b.call(a,d),b=null):(j=b,b=function(a,b,c){return j.call(n(a),c)})),b))for(;i>h;h++)b(a[h],c,g?d:d.call(a[h],h,b(a[h],c)));return e?a:j?b.call(a):i?b(a[0],c):f},L=function(a){return 1===a.nodeType||9===a.nodeType||!+a.nodeType};function M(){this.expando=n.expando+M.uid++}M.uid=1,M.prototype={register:function(a,b){var c=b||{};return a.nodeType?a[this.expando]=c:Object.defineProperty(a,this.expando,{value:c,writable:!0,configurable:!0}),a[this.expando]},cache:function(a){if(!L(a))return{};var b=a[this.expando];return b||(b={},L(a)&&(a.nodeType?a[this.expando]=b:Object.defineProperty(a,this.expando,{value:b,configurable:!0}))),b},set:function(a,b,c){var d,e=this.cache(a);if("string"==typeof b)e[b]=c;else for(d in b)e[d]=b[d];return e},get:function(a,b){return void 0===b?this.cache(a):a[this.expando]&&a[this.expando][b]},access:function(a,b,c){var d;return void 0===b||b&&"string"==typeof b&&void 0===c?(d=this.get(a,b),void 0!==d?d:this.get(a,n.camelCase(b))):(this.set(a,b,c),void 0!==c?c:b)},remove:function(a,b){var c,d,e,f=a[this.expando];if(void 0!==f){if(void 0===b)this.register(a);else{n.isArray(b)?d=b.concat(b.map(n.camelCase)):(e=n.camelCase(b),b in f?d=[b,e]:(d=e,d=d in f?[d]:d.match(G)||[])),c=d.length;while(c--)delete f[d[c]]}(void 0===b||n.isEmptyObject(f))&&(a.nodeType?a[this.expando]=void 0:delete a[this.expando])}},hasData:function(a){var b=a[this.expando];return void 0!==b&&!n.isEmptyObject(b)}};var N=new M,O=new M,P=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,Q=/[A-Z]/g;function R(a,b,c){var d;if(void 0===c&&1===a.nodeType)if(d="data-"+b.replace(Q,"-$&").toLowerCase(),c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:P.test(c)?n.parseJSON(c):c;
@@ -32,54 +24,190 @@ this.tablist=this._getList().addClass("ui-tabs-nav ui-helper-reset ui-helper-cle
 !function(e){if("function"==typeof define&&define.amd)define(e);else if("object"==typeof exports)module.exports=e();else{var n=window.Cookies,o=window.Cookies=e();o.noConflict=function(){return window.Cookies=n,o}}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var o=arguments[e];for(var t in o)n[t]=o[t]}return n}function n(o){function t(n,i,r){var c;if("undefined"!=typeof document){if(arguments.length>1){if(r=e({path:"/"},t.defaults,r),"number"==typeof r.expires){var s=new Date;s.setMilliseconds(s.getMilliseconds()+864e5*r.expires),r.expires=s}try{c=JSON.stringify(i),/^[\{\[]/.test(c)&&(i=c)}catch(a){}return i=o.write?o.write(i,n):encodeURIComponent(String(i)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=encodeURIComponent(String(n)),n=n.replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent),n=n.replace(/[\(\)]/g,escape),document.cookie=[n,"=",i,r.expires&&"; expires="+r.expires.toUTCString(),r.path&&"; path="+r.path,r.domain&&"; domain="+r.domain,r.secure?"; secure":""].join("")}n||(c={});for(var p=document.cookie?document.cookie.split("; "):[],d=/(%[0-9A-Z]{2})+/g,f=0;f<p.length;f++){var u=p[f].split("="),l=u[0].replace(d,decodeURIComponent),m=u.slice(1).join("=");'"'===m.charAt(0)&&(m=m.slice(1,-1));try{if(m=o.read?o.read(m,l):o(m,l)||m.replace(d,decodeURIComponent),this.json)try{m=JSON.parse(m)}catch(a){}if(n===l){c=m;break}n||(c[l]=m)}catch(a){}}return c}}return t.set=t,t.get=function(e){return t(e)},t.getJSON=function(){return t.apply({json:!0},[].slice.call(arguments))},t.defaults={},t.remove=function(n,o){t(n,"",e(o,{expires:-1}))},t.withConverter=n,t}return n(function(){})});
 //# sourceMappingURL=./js.cookie.min.js.map
 
-
-// to find out to create a new namespace to not collide with Magento standards jquery implementation has cost me 15 fucking minutes -> DAMN BASDARD ;-)
 var z = jQuery.noConflict( true );
 
 
 z(document).ready(function() {
-		/*
 		var pGress = setInterval(function() {
-				doGawsWebCall(); // do GAWS processing
-				setTimeout(function(){}, 110); // wait some time
-				doEmailWebCall(); // do the Email processing
+				doGawsWebCall();
 				return false;
-		}, 237);
-		*/
-			
+		}, 3000);
+		
 		// global variables here
 		var MAX_SHOW_RESULTS 					= 25; // how many results to fetch & show?
 		var MAX_LENGTH_GEE_FIELDED_BLOCK 		= 225; // how many pixel width
 		var MAX_LENGTH_GEE_SINGLELINE_BLOCK 	= 450; // how many pixel width
 	
-		var my_gee_token 						= Cookies.get('MelissaDataMagento_GEE_Token');
-		var my_gaws_token 						= Cookies.get('MelissaDataMagento_GAWS_Token');
-		var my_email_token						= Cookies.get('MelissaDataMagento_EMAIL_Token');
+		// todo: billing && shipping,  $('#checkout-step-shipping').append(function(i, re) {
 	
-		var is_email_enabled					= Cookies.get('MelissaDataMagento_EMAIL_ENABLED');
-		var is_gaws_enabled						= Cookies.get('MelissaDataMagento_GAWS_ENABLED');
-		var is_gee_enabled 						= Cookies.get('MelissaDataMagento_GEE_ENABLED');
-		var gee_singlerow_country				= Cookies.get('MelissaDataMagento_GEE_SINGLEROWCOUNTRIES'); // not yet implemented
-		
-		var gee_use_single 						= Cookies.get('MelissaDataMagento_GEE_SINGLEROW_ENABLED');
-		var gee_use_multi 						= Cookies.get('MelissaDataMagento_GEE_MULTIROW_ENABLED');
-				
-		// todo: billing && shipping,  z('#checkout-step-shipping').append(function(i, re) {
-		var n_gee_single						= gee_use_single.includes("1");
-		var n_gee_multi							= gee_use_multi.includes("1");
-		
-		var n_gee 								= is_gee_enabled.includes("1");
-		var n_gaws 								= is_gaws_enabled.includes("1");
-		var n_email								= is_email_enabled.includes("1");
-		
-		var resCountry 							= gee_singlerow_country.split(","); 
-		
-		//console.log("GEE multi: "+n_gee_multi + " Cookie Gee Mutli: " +gee_use_multi);
-		
-		/*
-		 * Set the correspondig Melissa Data Secure Service Endpoints
-		 * */	
+		// append our Autocompletion field to Magento top					
+		var insert_string = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Fielded Autocompletion Support:</b></tbody><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Step: Type House Number and Street Name" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><br /><br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Single Row Autocompletion Support:</b></tbody><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type House Number and Street Name" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><span id="gawsresults_top" style="display:none;"></span><br />';
 			
+		$( insert_string ).insertBefore("#checkout-step-billing");
+					
+		var insert_gawsresults = '<input name="billing[fax]" title="Fax" class="input-text " id="billing:fax" type="tel"><br /><br /><span id="gawsresults" style="display:none;"></span>';
+		$( insert_gawsresults ).insertAfter("#billing\\:fax");	
+		
+		// set display to SHOW content
+		$("#checkout-step-billing").css("display", "inline");
+		$("#billing\\:region_id").css("display", "inline");
+		
+		//var billing = new Billing fix???
+		$("#billing\\:address_id").val("-1");
+		
+	//	var state_debug 	= '<option selected value="CA">CA</option>';
+	//	$("#billing\\:region_id").html(state_debug);
+		
+		// Set the Country ISO 2 Code Result from GEE Country to corresponding Magento Field
+		$('#showCountryResults').on("click", function(){
+			var iso2Code 		= $("#showCountryResults").find(":selected").val();
+			var isoName 		= $("#showCountryResults").find(":selected").text();
+			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
+			$(".field .input-box #billing\\:country_id").html(html_country);
+			//var check = $(".field .input-box #billing\\:country_id").val();
+			
+			$('#PostalCodeSuggestions').focus();
+			$('#showPostalCodeResults').focus();
+			
+			//console.log("checking selected option:"+check);
+		}); // $('#showCountryResults').on("click", function(){
+		
+		// set the postal code from the GEE Postal Code Endpoint to Magento fields
+		$('#showPostalCodeResults').on("click", function(){
+			var locality 		= $("#showPostalCodeResults").find(":selected").val();
+			var postalcode 		= $("#showPostalCodeResults").find(":selected").attr("pc");
+						
+			var iso2Code 		= $("#showCountryResults").find(":selected").val();
+			var isoName 		= $("#showCountryResults").find(":selected").text();
+			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
+			
+			$(".field .input-box #billing\\:country_id").html(html_country);
+			$(".field .input-box #billing\\:city").val(locality);
+			$(".field .input-box #billing\\:postcode").val(postalcode);
+			
+			// reset street if clicked to postal code
+			$("#billing\\:street1").val("");
+			$("#showStreetResults").val("");
+			$("#showStreetResults").html("");
+			$("#StreetSuggestions").val("");
+			$("#StreetSuggestions").html("");
+			//$("#StreetSuggestions").focus();
+			$("#showStreetResults").focus();
+			$("#StreetSuggestions").focus();
+			//console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode);
+		}); // $('#showPostalCodeResults').on("click", function(){
+		
+		$('#showCountryResultsSingleRow').on("click", function(){		
+			
+			// reset street if clicked to postal code
+			$("#showAddressResultsSingleRow").html("");
+			$("#showAddressResultsSingleRow").val("");
+			$("#AddressSuggestionsSingleRow").html("");
+			$("#AddressSuggestionsSingleRow").val("");
+			$("#AddressSuggestionsSingleRow").focus();
+			
+			$('#showAddressResultsSingleRow').focus();
+			$('#AddressResultsSingleRow').focus();
+			//console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode);
+		}); // $('#showPostalCodeResults').on("click", function(){
+		
+		// set the street information from the GEE Address Endpoint to Magento fields
+		$('#showStreetResults').on("click", function(){
+			var locality 		= $("#showPostalCodeResults").find(":selected").val();
+			//var postalcode 	= $("#showPostalCodeResults").find(":selected").text();
+			var postalcode 		= $("#showPostalCodeResults").find(":selected").attr("pc");
+			var deliveryaddr	= $("#showStreetResults").find(":selected").text();
+			var adminarea		= $("#showPostalCodeResults").find(":selected").attr("aarea");
+			var adminarea_name	= $("#showStreetResults").find(":selected").attr("aarea");
+			
+			var iso2Code 		= $("#showCountryResults").find(":selected").val();
+			var isoName 		= $("#showCountryResults").find(":selected").text();
+			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
+			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea_name+'</option>';
+			
+			$(".field .input-box #billing\\:city").val(locality);
+			$(".field .input-box #billing\\:postcode").val(postalcode);
+			$("#billing\\:street1").val(deliveryaddr);
+			$(".field .input-box #billing\\:country_id").html(html_country);
+			$(".field .input-box #billing\\:region_id").html(html_state);
+			
+		//	console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode, "Addr:"+deliveryaddr);
+		}); // $('#showStreetResults').on("click", function(){
+		
+		// set the street information from the GEE Free Form Endpoint to Magento fields
+		$('#showAddressResultsSingleRow').on("click", function(){
+			var locality 		= $("#showAddressResultsSingleRow").find(":selected").attr("loc");
+			var postalcode 		= $("#showAddressResultsSingleRow").find(":selected").attr("pc");
+			var deliveryaddr	= $("#showAddressResultsSingleRow").find(":selected").attr("deliver");
+			var adminarea		= $("#showAddressResultsSingleRow").find(":selected").attr("aarea");
+			var simpleaddr		= $("#showAddressResultsSingleRow").find(":selected").attr("simpleaddr");
+			
+			var iso2Code 		= $("#showCountryResultsSingleRow").find(":selected").val();
+			var isoName 		= $("#showCountryResultsSingleRow").find(":selected").text();
+			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
+			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea+'</option>';
+			
+			$(".field .input-box #billing\\:city").val(locality);
+			$(".field .input-box #billing\\:postcode").val(postalcode);
+			$("#billing\\:street1").val(deliveryaddr);
+			$("#billing\\:street2").val();
+			$(".field .input-box #billing\\:country_id").html(html_country);
+			$(".field .input-box #billing\\:region_id").html(html_state);
+			
+			//console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode, "Addr:"+deliveryaddr);
+		}); // $('#showStreetResults').on("click", function(){
+		
+		// check for GEE cookie
+		Cookies.set('MelissaDataMagento_GEE_Token', "111466882");
+		Cookies.set('MelissaDataMagento_GEE_TimeStamp', $.now() );
+
+		var isGeeTokenCookie 		= Cookies.get('MelissaDataMagento_GEE_Token');
+		var isGeeTimeStampCookie 	= Cookies.get('MelissaDataMagento_GEE_TimeStamp');	
+
+		// Later more services
+		var isGawsTokenCookie 		= Cookies.get('MelissaDataMagento_GAWS_Token');
+		var isGawsTimeStampCookie 	= Cookies.get('MelissaDataMagento_GAWS_TimeStamp');			
+		var isEmailTokenCookie 		= Cookies.get('MelissaDataMagento_EMAIL_Token');
+		var isEmailTimeStampCookie 	= Cookies.get('MelissaDataMagento_EMAIL_TimeStamp');		
+		var isNameTokenCookie 		= Cookies.get('MelissaDataMagento_NAME_Token');
+		var isNameTimeStampCookie 	= Cookies.get('MelissaDataMagento_NAME_TimeStamp');		
+		var isPhoneTokenCookie 		= Cookies.get('MelissaDataMagento_PHONE_Token');
+		var isPhoneTimeStampCookie 	= Cookies.get('MelissaDataMagento_PHONE_TimeStamp');		
+
+		if (isGeeTokenCookie == undefined || isGeeTimeStampCookie == undefined ){
+		//	alert("Cookie existiert nicht und oder TimeStamp existiert nicht");
+		}
+
+		// later add validity check for Timestamp so that we make sure token is valid for request
+		// if cookie is undefined, that means no cookie is existing with valid information		
+		if ( isGeeTokenCookie == undefined || isGeeTimeStampCookie == undefined  ) { 
+			
+			//alert("In cookie");
+			//no cookie so make Token Server call
+			$.ajax({
+				url: "http://www.melissadata.de/demonstration/tokenserver_gee_magento.asp",
+								//url: "https://token.melissadata.net/v3/web/Service.svc/RequestToken?L=DGZahU25W0nQv9fUJ2zdMG==NlXZ792A3KHu9S3pscyFGM==OWkrOXfySi1i1etA/JOY0J==&P=pkgExpressEntry",				
+				async: false, // dont change!
+				cache: false,
+				error: function(errmessage) {
+					//console.log("errmessage object: %o", errmessage);
+					//$('#results').html('<p>An error has occurred: '+errmessage+"</p>");
+					console.log("error while making token server request:");
+				},
+				dataType: "jsonp",
+				success: function(data) {
+					Cookies.set('MelissaDataMagento_GEE_Token', data);
+					Cookies.set('MelissaDataMagento_GEE_TimeStamp', $.now() );
+					console.log("Cookie successfully set");
+				} // success
+			}) // $.ajax({})
+
+			// debug
+			//alert($.cookie('MelissaDataMagento_GEE_Token'));		
+		} // if ( isGeeTokenCookie == undefined || isGeeTimeStampCookie == undefined  ) { 
+
+		var my_token 		= Cookies.get('MelissaDataMagento_GEE_Token');
+		
 		// Global Express Entry
 		var urlGeePC_Real 	= "https://expressentry.melissadata.net/jsonp/GlobalExpressPostalCode";
 		var urlGeeCN_Real 	= "https://expressentry.melissadata.net/jsonp/GlobalExpressCountry";
@@ -89,715 +217,20 @@ z(document).ready(function() {
 		
 		// Global Address Verification
 		var urlGaws_Real	= "https://address.melissadata.net/V3/WEB/GlobalAddress/doGlobalAddress";
-		
-		// Global Email Verification
-		var urlEmail_Real	= "https://globalemail.melissadata.net/v3/WEB/GlobalEmail/doGlobalEmail";
-		
-		var insert_string_single = '<br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="singleShow">Melissa Data Single Row Autocompletion</b></tr><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Type Address" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showAddressSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br />';
-		
-		var insert_string_multi = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="multiShow">Melissa Data Fielded Autocompletion</b></tr><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Type Street Address" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="4. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></tr></table></p><br /><br /><p>';
-			
-			// SubBuildingSuggestions
-			// showSubPremise
-			
-		// set the sub premise field to not visible
-		z("#showAddressSubPremise").hide();
-		z("#showAddressSubPremise").css("display", "none");		
-		
-		z("#SubBuildingSingleRow").hide();
-		z("#SubBuildingSingleRow").css("display", "none");		
-		
-		z("#SubBuildingSuggestions").hide();
-		z("#SubBuildingSuggestions").css("display", "none");		
-	
-		z("#showSubPremise").hide();
-		z("#showSubPremise").css("display", "none");	
-	
-		if (n_gee === true){
-			// set display to SHOW content
-			z("#checkout-step-billing").css("display", "inline");
-			z("#billing\\:region_id").css("display", "inline");
-									
-			z( insert_string_single ).insertBefore("#checkout-step-billing");
-			z( insert_string_multi ).insertBefore("#checkout-step-billing");
-			
-			z("#autocomplete_melissadata_fielded").hide();
-			z("#autocomplete_melissadata_singlerow").hide();
-			z("#autocomplete_melissadata_fielded").css("display", "none");		
-			z("#autocomplete_melissadata_singlerow").css("display", "none");
-			
-			z("#singleShow").hide();
-			z("#singleShow").css("display", "none");		
-			z("#multiShow").hide();
-			z("#multiShow").css("display", "none");		
-			
-			if ( n_gee_single === true && n_gee_multi === true) { 
 				
-				// both enabled? 
-				z("#multiShow").show();
-				z("#multiShow").css("display", "inline");
-				z("#autocomplete_melissadata_fielded").show();
-				z("#autocomplete_melissadata_fielded").css("display", "inline");
-				
-				z("#singleShow").show();
-				z("#singleShow").css("display", "inline");
-				z("#autocomplete_melissadata_singlerow").show();
-				z("#autocomplete_melissadata_singlerow").css("display", "inline");
-								
-			} else if (n_gee_single === true ){
-			//	z( insert_string_single ).insertBefore("#checkout-step-billing");
-				z("#singleShow").show();
-				z("#singleShow").css("display", "inline");
-				z("#autocomplete_melissadata_singlerow").show();
-				z("#autocomplete_melissadata_singlerow").css("display", "inline");
-				z("#autocomplete_melissadata_fielded").hide();
-				z("#autocomplete_melissadata_fielded").css("display", "none");
-			} else if (n_gee_multi === true ){
-				z("#multiShow").show();
-				z("#multiShow").css("display", "inline");
-				z("#autocomplete_melissadata_fielded").show();
-				z("#autocomplete_melissadata_fielded").css("display", "inline");
-				z("#autocomplete_melissadata_singlerow").hide();
-				z("#autocomplete_melissadata_singlerow").css("display", "none");
-			} else { // not GEE and not GEE Multi
-				z("#autocomplete_melissadata_singlerow").hide();
-				z("#autocomplete_melissadata_singlerow").css("display", "none");
-				z("#autocomplete_melissadata_fielded").hide();
-				z("#autocomplete_melissadata_fielded").css("display", "none");
-			}// if n_gee_multi
-		} // if (n_gee === true){
-		
-			
-		if (n_gaws === true && n_email === true){
-			
-			var insert_top_gawsresults = '<form id="formaction"><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
-			z( insert_top_gawsresults ).insertBefore("#checkout-step-billing");	
-			// set display to SHOW content
-			z("#checkout-step-billing").css("display", "inline");
-			z("#billing\\:region_id").css("display", "inline");
-					
-		} else if (n_gaws === true){				
-			var insert_top_gawsresults = '<form><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
-			z( insert_top_gawsresults ).insertBefore("#checkout-step-billing");	
-			// set display to SHOW content
-			z("#checkout-step-billing").css("display", "inline");
-			z("#billing\\:region_id").css("display", "inline");
-			
-		} else if (n_email === true){  // if (n_gaws === true){					
-			var insert_top_emailresults = '<form><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify Now "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
-			z( insert_top_emailresults  ).insertBefore("#checkout-step-billing");	
-			// set display to SHOW content
-			z("#checkout-step-billing").css("display", "inline");
-			z("#billing\\:region_id").css("display", "inline");
-		} // if (n_gaws === true){					
-			
-							
-		// Set the Country ISO 2 Code Result from GEE Country to corresponding Magento Field
-		z("#showCountryResults").on("click", function(){
-			var iso2Code 		= z("#showCountryResults").find(":selected").val();
-			var isoName 		= z("#showCountryResults").find(":selected").text();
-			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
-			
-			var arr_pc_options 	= new Array();
-			arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
-			arr_pc_options.push(html_country);
-			arr_pc_options.push('</select>');
-			var pc_html 		= arr_pc_options.join("");
-				
-			// if iso2Code == resCountry element -> then: show Single Line Entry && disable Fielded Entry && take current Country input and push that to Single line input
-			var singleLineFlag = 0;
-		/*	
-			z.each(resCountry, function( index, value ) {
-				value = value.trim();
-				var iso = iso2Code.toLowerCase();
-				if (value.toLowerCase().indexOf(iso) != -1){
-					//singleLineFlag = 1;
-				}
-			});
-		*/
-			
-			if (singleLineFlag == 1){
-			
-				z("#billing\\:country_id").html(html_country);
-				z("#autocomplete_melissadata_singlerow").show();
-				
-				// disable multi line entry / disable fielded Entry
-				z("#autocomplete_melissadata_fielded").hide();
-
-				z("#CountrySuggestionsSingleRow").val("");
-				z("#CountrySuggestionsSingleRow").html("");
-				z("#CountrySuggestionsSingleRow").val(isoName);
-
-				// reset street if clicked to postal code
-				z("#showAddressResultsSingleRow").html("");
-				z("#showAddressResultsSingleRow").val("");
-				z("#AddressSuggestionsSingleRow").html("");
-				z("#AddressSuggestionsSingleRow").val("");
-				
-				// set focus to address input field
-				z("#AddressSuggestionsSingleRow").focus();
-				z("#showAddressResultsSingleRow").focus();
-				z("#AddressResultsSingleRow").focus();
-
-				// reset the search box, because we have a valid input
-				z("#showCountryResultsSingleRow").hide();
-				z("#showCountryResultsSingleRow").html(pc_html);
-
-			} else {
-						
-				z("#billing\\:country_id").html(html_country);
-				
-				// on field click of Country Iso Search field, put the results in the top of the country search box
-				z("#CountrySuggestions").val("");
-				z("#CountrySuggestions").html("");
-				z("#CountrySuggestions").val(isoName);
-				
-				// reset postal code on Country click
-				z("#PostalCodeSuggestions").val("");
-				z("#showPostalCodeResults").val("");
-				z("#PostalCodeSuggestions").html("");
-				z("#showPostalCodeResults").html("");
-				
-				// reset also street information
-				z("#billing\\:street1").val("");
-				z("#showStreetResults").val("");
-				z("#showStreetResults").html("");
-				z("#StreetSuggestions").val("");
-				z("#StreetSuggestions").html("");
-				
-				// after click set focus to postal code field
-				z("#PostalCodeSuggestions").focus();
-				z("#showPostalCodeResults").focus();
-
-				z("#showCountryResults").html(pc_html);
-				
-				// reset the search box, because we have a valid input
-				//z("#showCountryResults").val("");
-				//z("#showCountryResults").html("");
-				z("#showCountryResults").hide();
-			}
-		
-			//console.log("checking selected option: #showCountryResults:"+html_country);
-			
-			res = "Country selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-				
-		}); // z('#showCountryResults').on("click", function(){
-		
-		// set the suite number to the corresponding field
-		z("#showAddressSubPremise").on("click", function(){
-			var subbuilding 	= z("#showAddressSubPremise").find(":selected").val();
-			var deliveryaddr	= z("#showAddressResultsSingleRow").find(":selected").attr("deliver");
-			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-			var pc_sec			= z("#showAddressSubPremise").find(":selected").attr("pc_sec");
-			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
-			
-			// take address & append apt
-			z("#billing\\:street1").val("");
-			z("#billing\\:street1").html("");
-			
-			// GB/UK related
-			var organization	= z("#showAddressResultsSingleRow").find(":selected").attr("organization");
-			var building		= z("#showAddressResultsSingleRow").find(":selected").attr("building");
-			var premise			= z("#showAddressResultsSingleRow").find(":selected").attr("premise");
-			var thoroughfare	= z("#showAddressResultsSingleRow").find(":selected").attr("thoroughfare");
-			
-			if (pc_sec.length > 2 && iso2Code.toLowerCase().indexOf("us") != -1){
-					z("#billing\\:postcode").val("");
-					z("#billing\\:postcode").html("");
-					z("#billing\\:postcode").val(pc_sec);
-					console.log("Setting Postal Code ZIP9:" +pc_sec);
-			}
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				b.push(subbuilding);
-				//b.push(premise);
-				//b.push(thoroughfare);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-			} else { // all other countries
-				
-				console.log("Set apartment number with street2: "+subbuilding);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val(subbuilding);
-			
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-						
-			z("#SubBuildingSingleRow").val("");
-			z("#SubBuildingSingleRow").html("");
-			z("#SubBuildingSingleRow").val(subbuilding);
-			
-			z("#showAddressSubPremise").val("");
-			z("#showAddressSubPremise").html("");		
-			z("#showAddressSubPremise").val(subbuilding);	
-			
-			res = "Suite selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-			
-		}); // z("#showAddressSubPremise").on("click", function(){
-		
-		// set the suite number to the corresponding field
-		z("#showSubPremise").on("click", function(){
-			var subbuilding 	= z("#showSubPremise").find(":selected").val();
-			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-			var pc_sec			= z("#showSubPremise").find(":selected").attr("pc_sec");
-			
-			//var deliveryaddr	= z("#showStreetResults").find(":selected").attr("deliver");
-			//var deliveryaddr	= Cookies.get('MelissaDataMagento_deliveryaddr');
-			var deliveryaddr	= Cookies.get('MelissaDataMagento_deliveryaddr');
-			var iso2Code 		= z("#showCountryResults").find(":selected").val();
-			
-			// take address & append apt
-			z("#billing\\:street1").val("");
-			z("#billing\\:street1").html("");
-			
-			// GB/UK related
-			var organization	= z("#showStreetResults").find(":selected").attr("organization");
-			var building		= z("#showStreetResults").find(":selected").attr("building");
-			var premise			= z("#showStreetResults").find(":selected").attr("premise");
-			var thoroughfare	= z("#showStreetResults").find(":selected").attr("thoroughfare");
-			
-			if (pc_sec.length > 2 && iso2Code.toLowerCase().indexOf("us") != -1){
-					z("#billing\\:postcode").val("");
-					z("#billing\\:postcode").html("");
-					z("#billing\\:postcode").val(pc_sec);
-					console.log("Setting Postal Code ZIP9:" +pc_sec);
-			}
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				b.push(subbuilding);
-				//b.push(premise);
-				//b.push(thoroughfare);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-			} else { // all other countries
-				console.log("Set apartment number with street2: "+subbuilding + " and delivery: " +deliveryaddr);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val(subbuilding);
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-						
-			z("#SubBuildingSuggestions").val("");
-			z("#SubBuildingSuggestions").html("");
-			z("#SubBuildingSuggestions").val(subbuilding);
-			
-			z("#showSubPremise").val("");
-			z("#showSubPremise").html("");		
-			z("#showSubPremise").val(subbuilding);	
-			
-			res = "Suite selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");
-		}); // z("#showSubPremise").on("click", function(){
-		
-		// set the postal code from the GEE Postal Code Endpoint to Magento fields
-		z("#showPostalCodeResults").on("click", function(){
-			var locality 		= z("#showPostalCodeResults").find(":selected").val();
-			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-						
-			var iso2Code 		= z("#showCountryResults").find(":selected").val();
-			var isoName 		= z("#showCountryResults").find(":selected").text();
-			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
-			
-			// on field click of Country Iso Search field, put the results in the top of the country search box
-			z("#PostalCodeSuggestions").val("");
-			z("#PostalCodeSuggestions").html("");
-			z("#PostalCodeSuggestions").val(postalcode+", "+locality);
-
-			z("#billing\\:country_id").html(html_country);
-			z("#billing\\:city").val(locality);
-			z("#billing\\:postcode").val(postalcode);
-			
-			// reset street if clicked to postal code
-			z("#billing\\:street1").val("");
-			z("#showStreetResults").val("");
-			z("#showStreetResults").html("");
-			z("#StreetSuggestions").val("");
-			z("#StreetSuggestions").html("");
-			//z("#StreetSuggestions").focus();
-			
-			// set focus to street suggestion field
-			z("#showStreetResults").focus();
-			z("#StreetSuggestions").focus();
-
-			// reset the search box, because we have a valid input
-			z("#showPostalCodeResults").hide();
-			res = "Postal Code selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");		
-		}); // z('#showPostalCodeResults').on("click", function(){
-		
-		z("#showCountryResultsSingleRow").on("click", function(){		
-			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
-			var isoName 		= z("#showCountryResultsSingleRow").find(":selected").text();
-			
-			// on field click of Country Iso Search field, put the results in the top of the country search box
-			z("#CountrySuggestionsSingleRow").val("");
-			z("#CountrySuggestionsSingleRow").html("");
-			z("#CountrySuggestionsSingleRow").val(isoName);
-
-			// reset street if clicked to postal code
-			z("#showAddressResultsSingleRow").html("");
-			z("#showAddressResultsSingleRow").val("");
-			z("#AddressSuggestionsSingleRow").html("");
-			z("#AddressSuggestionsSingleRow").val("");
-			
-			// set focus to address input field
-			z("#AddressSuggestionsSingleRow").focus();
-			z("#showAddressResultsSingleRow").focus();
-			z("#AddressResultsSingleRow").focus();
-
-			// reset the search box, because we have a valid input
-			z("#showCountryResultsSingleRow").hide();
-
-			res = "Country selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-		}); // z('#showPostalCodeResults').on("click", function(){
-		
-		// set the street information from the GEE Address Endpoint to Magento fields
-		z("#showStreetResults").on("click", function(){
-		
-			//alert("in showAddressResultsSingleRow");
-			var takeaddr		= z("#showStreetResults").find(":selected").val();
-			var locality 		= z("#showStreetResults").find(":selected").attr("loc");
-			var postalcode 		= z("#showStreetResults").find(":selected").attr("pc");
-			var pc_sec_tmp		= z("#showStreetResults").find(":selected").attr("pc_sec");
-			var deliveryaddr	= z("#showStreetResults").find(":selected").attr("deliver");
-			var adminarea		= z("#showStreetResults").find(":selected").attr("aarea");
-			var simpleaddr		= z("#showStreetResults").find(":selected").attr("simpleaddr");
-			var subbuilding_tmp	= z("#showStreetResults").find(":selected").attr("subbuilding");
-			var subbuilding		= subbuilding_tmp.split(",");
-			var pc_sec			= pc_sec_tmp.toString().split(",");
-					
-			var iso2Code 		= z("#showCountryResults").find(":selected").val();
-			var isoName 		= z("#showCountryResults").find(":selected").text();
-			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
-			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea+'</option>';
-			
-			Cookies.set('MelissaDataMagento_deliveryaddr', deliveryaddr);
-						
-			// GB related
-			var organization	= z("#showStreetResults").find(":selected").attr("organization");
-			var building		= z("#showStreetResults").find(":selected").attr("building");
-			//var subbuild		= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var premise			= z("#showStreetResults").find(":selected").attr("premise");
-			var thoroughfare	= z("#showStreetResults").find(":selected").attr("thoroughfare");
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				//b.push(subbuild);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-				
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:country_id").html(html_country);
-				
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-			
-				//z("#billing\\:region_id").html(html_state); // not required in GB
-			
-			} else { // all other countries
-				
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val("");
-				z("#billing\\:country_id").html(html_country);
-				//z("#billing\\:region_id").html(html_state);
-				//z("#billing\\:region").html(html_state);
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-				
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-					
-			// on field click of Country Iso Search field, put the results in the top of the country search box
-			z("#StreetSuggestions").val("");
-			z("#StreetSuggestions").html("");
-			z("#StreetSuggestions").val(takeaddr);
-			
-			z("#showStreetResults").val("");
-			z("#showStreetResults").html("");
-			z("#showStreetResults").val(takeaddr);
-
-			res = "Address selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-							
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-			
-			// set focus to address input field
-			z("#SubBuildingSuggestions").focus();
-			z("#showSubPremise").focus();
-			
-			//console.log("code before suite number check");
-			// if iso2Code == resCountry element -> then: show the suite or apartment numbers
-			var singleLineFlag = 1; // have set it to 1 standard because we removed single line countries
-			
-			/*
-			z.each(resCountry, function( index, value ) {
-				value = value.trim();
-				var iso = iso2Code.toLowerCase();
-				if (value.toLowerCase().indexOf(iso) != -1){
-				//	alert("Suite number check valid");
-					// that means show the premise number
-					singleLineFlag = 1;
-				} // if (value.toLowerCase().indexOf(iso) != -1){
-			}); // z.each(resCountry, function( index, value ) {
-			*/
-			
-			// if we have a single line country and the first element of the subbuilding array holds a valid key
-			if (singleLineFlag == 1 && typeof subbuilding[0] != "undefined" && subbuilding[0] != null && subbuilding[0].length > 0){
-				//console.log("I am in Suite Show Code");
-				
-				var parts_addr 			= new Array();
-				var parts_addr_count	= 1;
-				var select_block_size 	= MAX_LENGTH_GEE_SINGLELINE_BLOCK + 100;
-				parts_addr.push('<select style="width: '+select_block_size+'px;" size="25">');
-				
-				z.each(subbuilding, function( index, value ) {
-					value = value.trim();				
-					var pc_sec_val = postalcode+"-"+pc_sec[index];
-					if (((typeof value != "undefined") && (typeof value.valueOf() == "string")) && (value.length >= 1)) {
-						if (parts_addr_count >= 0){
-							parts_addr.push('<option selected pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-							parts_addr.push('<option pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						}
-					} // if strict check
-				}); // z.each(resCountry, function( index, value ) {
-			
-				parts_addr.push('</select>');
-				var addr_html 	= parts_addr.join("");
-				
-				// set focus to apartment number input field
-				z("#SubBuildingSuggestions").focus();
-				z("#showSubPremise").focus();
-			
-				z("#showSubPremise").html("");
-				z("#showSubPremise").val("");
-				z("#showSubPremise").html(addr_html);
-				z("#showSubPremise").css("display", "inline");	
-				z("#showSubPremise").show();				
-			
-			} // if (singleLineFlag == 1 && subbuilding.length >= 1){
-							
-		//	console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode, "Addr:"+deliveryaddr);
-		}); // z('#showStreetResults').on("click", function(){
-		
-		// set the street information from the GEE Free Form Endpoint to Magento fields
-		z("#showAddressResultsSingleRow").on("click", function(){
-					
-			//alert("in showAddressResultsSingleRow");
-			var takeaddr		= z("#showAddressResultsSingleRow").find(":selected").val();
-			var locality 		= z("#showAddressResultsSingleRow").find(":selected").attr("loc");
-			var postalcode 		= z("#showAddressResultsSingleRow").find(":selected").attr("pc");
-			var pc_sec_tmp		= z("#showAddressResultsSingleRow").find(":selected").attr("pc_sec");
-			var deliveryaddr	= z("#showAddressResultsSingleRow").find(":selected").attr("deliver");
-			var adminarea		= z("#showAddressResultsSingleRow").find(":selected").attr("aarea");
-			var simpleaddr		= z("#showAddressResultsSingleRow").find(":selected").attr("simpleaddr");
-			var subbuilding_tmp	= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var subbuilding		= subbuilding_tmp.split(",");
-			var pc_sec			= pc_sec_tmp.toString().split(",");
-			//console.log("PC SEC VALUES: "+pc_sec);
-				
-			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
-			var isoName 		= z("#showCountryResultsSingleRow").find(":selected").text();
-			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
-			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea+'</option>';
-						
-			// GB related
-			var organization	= z("#showAddressResultsSingleRow").find(":selected").attr("organization");
-			var building		= z("#showAddressResultsSingleRow").find(":selected").attr("building");
-			//var subbuild		= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var premise			= z("#showAddressResultsSingleRow").find(":selected").attr("premise");
-			var thoroughfare	= z("#showAddressResultsSingleRow").find(":selected").attr("thoroughfare");
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				//b.push(subbuild);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-				
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:country_id").html(html_country);
-				
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-			
-				//z("#billing\\:region_id").html(html_state); // not required in GB
-			
-			} else { // all other countries
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val("");
-				z("#billing\\:country_id").html(html_country);
-				//z("#billing\\:region_id").html(html_state);
-				//z("#billing\\:region").html(html_state);
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-				
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-					
-			// on field click of Country Iso Search field, put the results in the top of the country search box
-			z("#AddressSuggestionsSingleRow").val("");
-			z("#AddressSuggestionsSingleRow").html("");
-			z("#AddressSuggestionsSingleRow").val(takeaddr);
-
-			// reset the search box, because we have a valid input
-			z("#showAddressResultsSingleRow").hide();
-
-			res = "Street and House Number have been chosen.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-			
-			//console.log("code before suite number check");
-			// if iso2Code == resCountry element -> then: show the suite or apartment numbers
-			var singleLineFlag = 1; // have set it to 1 standard because we removed single line countries
-			
-			/*
-			z.each(resCountry, function( index, value ) {
-				value = value.trim();
-				var iso = iso2Code.toLowerCase();
-				if (value.toLowerCase().indexOf(iso) != -1){
-				//	alert("Suite number check valid");
-					// that means show the premise number
-					singleLineFlag = 1;
-				} // if (value.toLowerCase().indexOf(iso) != -1){
-			}); // z.each(resCountry, function( index, value ) {
-			*/
-			
-			// if we have a single line country and the first element of the subbuilding array holds a valid key
-			if (singleLineFlag == 1 && typeof subbuilding[0] != "undefined" && subbuilding[0] != null && subbuilding[0].length > 0){
-				//console.log("I am in Suite Show Code");
-				
-				var parts_addr 			= new Array();
-				var parts_addr_count	= 1;
-				var select_block_size 	= MAX_LENGTH_GEE_SINGLELINE_BLOCK + 100;
-				parts_addr.push('<select style="width: '+select_block_size+'px;" size="25">');
-				
-				z.each(subbuilding, function( index, value ) {
-					value = value.trim();				
-					var pc_sec_val = postalcode+"-"+pc_sec[index];
-					console.log("PC SEC VAL of INDEX: "+pc_sec_val + " INDEX:" + index);
-					
-					if (((typeof value != "undefined") && (typeof value.valueOf() == "string")) && (value.length >= 1)) {
-						if (parts_addr_count >= 0){
-							parts_addr.push('<option selected pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-							parts_addr.push('<option pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						}
-					} // if strict check
-				}); // z.each(resCountry, function( index, value ) {
-			
-				parts_addr.push('</select>');
-				var addr_html 	= parts_addr.join("");
-				
-				// set focus to apartment number input field
-				z("#SubBuildingSingleRow").focus();
-				z("#showAddressSubPremise").focus();
-			
-				z("#showAddressSubPremise").html("");
-				z("#showAddressSubPremise").val("");
-				z("#showAddressSubPremise").html(addr_html);
-				z("#showAddressSubPremise").css("display", "inline");	
-				z("#showAddressSubPremise").show();				
-			
-			} // if (singleLineFlag == 1 && subbuilding.length >= 1){
-			
-		}); //z("#showAddressResultsSingleRow").on("click", function(){
-						
-	// if the config admin option says, we are allowed to use GEE then please use it
-	if (n_gee === true){
-				
-		z("#AddressSuggestionsSingleRow").autocomplete({
+		$('#AddressSuggestionsSingleRow').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
-			delay: 			250,
+			delay: 			55,
 			source: function( request, response ){
-				z.ajax({
+				$.ajax({
 				  url: 		urlGeeFF_Real,
 				  dataType: "jsonp",
 				  data: {
 					maxrecords: 	MAX_SHOW_RESULTS,
-					ff: 			z("#AddressSuggestionsSingleRow").val(),
-					country: 		z("#showCountryResultsSingleRow").find(":selected").val(),
-					id: 			my_gee_token,		
+					ff: 			$("#AddressSuggestionsSingleRow").val(),
+					country: 		$("#showCountryResultsSingleRow").find(":selected").val(),
+					id: 			my_token,		
 					format: 		"jsonp",
 					nativecharset: 	false,
 				  },
@@ -812,13 +245,13 @@ z(document).ready(function() {
 						arr_addr_options.push('<select style="width: '+select_block_size+'px;" size="10">');
 						
 						var string 		= JSON.stringify(data);
-						var obj 		= z.parseJSON(string);
+						var obj 		= $.parseJSON(string);
 						
 						var string2 	= JSON.stringify(obj.Results);
-						var obj2 		= z.parseJSON(string2);
+						var obj2 		= $.parseJSON(string2);
 						
-					//	var rand = Math.random();
-					//	console.log("Random id:" + rand);
+						var rand = Math.random();
+						console.log("Random id:" + rand);
 						var resultHtmlAddr 	= traverseAddrSingle(obj2);
 
 						arr_addr_options.push(resultHtmlAddr);
@@ -826,11 +259,8 @@ z(document).ready(function() {
 						var addr_html 	= arr_addr_options.join("");
 						
 						//console.log("POSTALCOOOODEEE: " + pc_html);
-						z("#showAddressResultsSingleRow").html("");
-						z("#showAddressResultsSingleRow").val("");
-						z("#showAddressResultsSingleRow").html(addr_html);
-						z("#showAddressResultsSingleRow").show();
-
+						$("#showAddressResultsSingleRow").html(addr_html);
+						
 						// reset array
 						parts_addr 		= [];
 						
@@ -842,28 +272,22 @@ z(document).ready(function() {
 							//	pc = o.PostalCodePrimary; 
 							//	lc = o.Locality;
 								
-								var cntryyy = z("#showCountryResultsSingleRow").find(":selected").val();
+								var cntryyy= $("#showCountryResultsSingleRow").find(":selected").val();
 								addr 		= o.Address;
 								simpleaddr 	= o.Address2;
 								loc 		= o.Locality;
 								pc 			= o.PostalCode;
-								pc_sec		= o.PostalCodeSecondary;
 								aarea 		= o.AdministrativeArea;
 								deliver 	= o.DeliveryAddress;
-								subbuilding = o.SubBuilding;
-								organization = o.Organization;
-								building	= o.Building;
-								premise		= o.Premise;
-								tn			= o.Thoroughfare;
 								
 								//console.log("cntryyy: "+cntryyy+" loc="+lc+" pc="+pc+" simpleaddr="+simpleaddr+" aarea="+aarea+" deliver="+deliver);
 								//addr = o.DeliveryAddress;
 								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
 									if (parts_addr_count >= 0){
-										parts_addr.push('<option selected value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
+										parts_addr.push('<option selected value="'+addr+'" loc="'+loc+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
 										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-										parts_addr.push('<option value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
+									} else if ( parts_addr_count >= 2 && parts_addr_count <= MAX_SHOW_RESULTS ){
+										parts_addr.push('<option value="'+addr+'" loc="'+loc+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
 										parts_addr_count++;
 									}
 								} // if strict check
@@ -885,26 +309,26 @@ z(document).ready(function() {
 						} // function uniqAddr(a) {
 						
 					} // success: function( data ){
-				}) // z.ajax({
+				}) // $.ajax({
 			} // source: function( request, response ){
-		}); // z('#checkout-step-billing #CountrySuggestions').autocomplete({
+		}); // $('#checkout-step-billing #CountrySuggestions').autocomplete({
 		
 		
-		z("#StreetSuggestions").autocomplete({
+		$('#StreetSuggestions').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
-			delay: 			250,
+			delay: 			95,
 			source: function( request, response ){
-				z.ajax({
+				$.ajax({
 				  url: 		urlGeeAd_Real,
 				  dataType: "jsonp",
 				  data: {
 					maxrecords: 	MAX_SHOW_RESULTS,
-					address1: 		z("#StreetSuggestions").val(),
-					locality: 		z("#showPostalCodeResults").find(":selected").val(),
-					postalcode: 	z("#showPostalCodeResults").find(":selected").attr("pc"), // this is right here!
-					country: 		z("#showCountryResults").find(":selected").val(),
-					id: 			my_gee_token,		
+					address1: 		$("#StreetSuggestions").val(),
+					locality: 		$("#showPostalCodeResults").find(":selected").val(),
+					postalcode: 	$("#showPostalCodeResults").find(":selected").attr("pc"), // this is right here!
+					country: 		$("#showCountryResults").find(":selected").val(),
+					id: 			my_token,		
 					format: 		"jsonp",
 					nativecharset: 	false,
 				  },
@@ -917,13 +341,13 @@ z(document).ready(function() {
 						arr_addr_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
 						
 						var string 		= JSON.stringify(data);
-						var obj 		= z.parseJSON(string);
+						var obj 		= $.parseJSON(string);
 						
 						var string2 	= JSON.stringify(obj.Results);
-						var obj2 		= z.parseJSON(string2);
+						var obj2 		= $.parseJSON(string2);
 						
-					//	var rand = Math.random();
-					//	console.log("Random id:" + rand);
+						var rand = Math.random();
+						console.log("Random id:" + rand);
 						var resultHtmlAddr 	= traverseAddr(obj2);
 
 						arr_addr_options.push(resultHtmlAddr);
@@ -931,11 +355,8 @@ z(document).ready(function() {
 						var addr_html 	= arr_addr_options.join("");
 						
 						//console.log("POSTALCOOOODEEE: " + pc_html);
-						z("#showStreetResults").html("");
-						z("#showStreetResults").val("");
-						z("#showStreetResults").html(addr_html);
-						z("#showStreetResults").show();
-
+						$("#showStreetResults").html(addr_html);
+						
 						// reset array
 						parts_addr 		= [];
 						
@@ -946,45 +367,27 @@ z(document).ready(function() {
 							for (i in o) {
 							//	pc = o.PostalCodePrimary; 
 							//	lc = o.Locality;
-							//	addr		= o.DeliveryAddress;//o.Address;
-							//	aarea 		= o.AdministrativeArea;
+								addr = o.DeliveryAddress;//o.Address;
+								aarea = o.AdministrativeArea;
 								
-								addr 		= o.DeliveryAddress;//o.Address;
-								simpleaddr 	= o.DeliveryAddress;//o.Address;
-								loc 		= o.Locality;
-								pc 			= o.PostalCode;
-								pc_sec		= o.PostalCodeSecondary;
-								aarea 		= o.AdministrativeArea;
-								deliver 	= o.DeliveryAddress;
-								subbuilding = o.SubBuilding;
-								organization = o.Organization;
-								building	= o.Building;
-								premise		= o.Premise;
-								tn			= o.Thoroughfare;
-						
-								console.log("sub building:" +subbuilding);
-								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
-									if (parts_addr_count >= 0){
-										parts_addr.push('<option selected value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
-										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-										parts_addr.push('<option value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
-										parts_addr_count++;
-									}
-								} // if strict check
-						
-						/*		
 								//addr = o.DeliveryAddress;
 								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
+								/*	console.log("addr:" +addr);
+									if (parts_addr_count >= 0){
+										parts_addr.push('<option selected value="'+addr+'">'+addr+'</option>');
+									} else {
+										parts_addr.push('<option value="'+addr+'">'+addr+'</option>');
+									}
+									parts_addr_count++;
+								*/
 									if (parts_addr_count >= 0){
 										parts_addr.push('<option selected value="'+addr+'" aarea="'+aarea+'">'+addr+'</option>');
 										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_addr_count >= 2 && parts_addr_count <= MAX_SHOW_RESULTS ){
 										parts_addr.push('<option value="'+addr+'" aarea="'+aarea+'">'+addr+'</option>');
 										parts_addr_count++;
 									}
 								} // if strict check
-						*/
 								if (typeof(o[i])=="object") {
 								//	console.log("key:" + i, "value:"+o[i])
 									//console.log("key:" + i.PostalCodePrimary, "value:"+o[i.PostalCodePrimary])
@@ -1003,24 +406,24 @@ z(document).ready(function() {
 						} // function uniqAddr(a) {
 						
 					} // success: function( data ){
-				}) // z.ajax({
+				}) // $.ajax({
 			} // source: function( request, response ){
-		}); // z('#checkout-step-billing #CountrySuggestions').autocomplete({
+		}); // $('#checkout-step-billing #CountrySuggestions').autocomplete({
 		
 		
-		z("#PostalCodeSuggestions").autocomplete({
+		$('#PostalCodeSuggestions').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
-			delay: 			250,
+			delay: 			35,
 			source: function( request, response ){
-				z.ajax({
+				$.ajax({
 				  url: 		urlGeePC_Real,
 				  dataType: "jsonp",
 				  data: {
 					maxrecords: 	MAX_SHOW_RESULTS,
-					postalcode: 	z("#PostalCodeSuggestions").val(),
-					country: 		z("#showCountryResults").find(":selected").val(),
-					id: 			my_gee_token,		
+					postalcode: 	$("#PostalCodeSuggestions").val(),
+					country: 		$("#showCountryResults").find(":selected").val(),
+					id: 			my_token,		
 					format: 		"jsonp",
 					nativecharset: 	false,
 				  },
@@ -1033,10 +436,10 @@ z(document).ready(function() {
 						arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
 						
 						var string 		= JSON.stringify(data);
-						var obj 		= z.parseJSON(string);
+						var obj 		= $.parseJSON(string);
 						
 						var string2 	= JSON.stringify(obj.Results);
-						var obj2 		= z.parseJSON(string2);
+						var obj2 		= $.parseJSON(string2);
 						
 						var resultHtml 	= traversePC(obj2);
 
@@ -1045,12 +448,8 @@ z(document).ready(function() {
 						var pc_html 	= arr_pc_options.join("");
 						
 						//console.log("POSTALCOOOODEEE: " + pc_html);
+						$("#showPostalCodeResults").html(pc_html);
 						
-						z("#showPostalCodeResults").html("");
-						z("#showPostalCodeResults").val("");
-						z("#showPostalCodeResults").html(pc_html);
-						z("#showPostalCodeResults").show();
-
 						// reset array
 						parts_pc 		= [];
 						
@@ -1059,18 +458,21 @@ z(document).ready(function() {
 							var lc = "";
 							var aarea = "";
 							for (i in o) {
-								//pc 		= o.PostalCodePrimary; // hier ansetzen: 
-								pc 		= o.PostalCode; 
+								pc 		= o.PostalCodePrimary; 
 								lc 		= o.Locality;
 								aarea 	= o.AdministrativeArea;
-								premise	= o.Premise;
+								
+							//	var postalcode 	= $("#PostalCodeSuggestions").val();
+							//	var country 	= 	$("#showCountryResults").find(":selected").val();
+					
 								//console.log("POSTALCOOOODEEE: " +postalcode+" locality: "+lc +"country: "+country);
+								//console.log("i: " +i+"o: "+o);
 								if (((typeof pc != "undefined") && (typeof pc.valueOf() == "string")) && (pc.length > 0) && ((typeof lc != "undefined") && (typeof lc.valueOf() == "string")) && (lc.length > 0)) {
 									if (parts_pc_count >= 0){
-										parts_pc.push('<option selected value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
+										parts_pc.push('<option selected value="'+lc+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
-										parts_pc.push('<option value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
+										parts_pc.push('<option value="'+lc+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
 										parts_pc_count++;
 									}
 								} // if strict check
@@ -1091,21 +493,22 @@ z(document).ready(function() {
 						} // function uniq(a) {
 						
 					} // success: function( data ){
-				}) // z.ajax({
+				}) // $.ajax({
 			} // source: function( request, response ){
-		}); // z('#PostalCodeSuggestions').autocomplete({
-			
-		z("#CountrySuggestions").autocomplete({
+		}); // $('#PostalCodeSuggestions').autocomplete({
+		
+		
+		$('#CountrySuggestions').autocomplete({
 			showHeader: true, 
 			minLength: 	1, 
-			delay: 		250,
+			delay: 		35,
 			source: function( request, response ){
-				z.ajax({
+				$.ajax({
 				  url: 		urlGeeCN_Real,
 				  dataType: "jsonp",
 				  data: {
-					country: 	z("#CountrySuggestions").val(),
-					id: 		my_gee_token,	
+					country: 	$("#CountrySuggestions").val(),
+					id: 		my_token,	
 					maxrecords: MAX_SHOW_RESULTS,
 					format: 	"jsonp",
 				  },
@@ -1119,10 +522,10 @@ z(document).ready(function() {
 						arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
 						
 						var string 			= JSON.stringify(data);
-						var obj 			= z.parseJSON(string);
+						var obj 			= $.parseJSON(string);
 						
 						var string2 		= JSON.stringify(obj.Results);
-						var obj2 			= z.parseJSON(string2);
+						var obj2 			= $.parseJSON(string2);
 						
 						var resultHtml 		= traverseCN(obj2);
 
@@ -1131,11 +534,8 @@ z(document).ready(function() {
 						var pc_html 		= arr_pc_options.join("");
 						
 						//console.log("POSTALCOOOODEEE: " + pc_html);
-						z("#showCountryResults").html("");
-						z("#showCountryResults").val("");
-						z("#showCountryResults").html(pc_html);
-						z("#showCountryResults").show();
-
+						$("#showCountryResults").html(pc_html);
+						
 						// reset array
 						parts_pc 		= [];
 						
@@ -1151,7 +551,7 @@ z(document).ready(function() {
 									if (parts_pc_count >= 0){
 										parts_pc.push('<option selected value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
 										parts_pc.push('<option value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
 									}
@@ -1177,19 +577,19 @@ z(document).ready(function() {
 					} // success: function( data ){
 				})
 			}
-		}); // z('#CountrySuggestions').autocomplete({
-				
-		z('#CountrySuggestionsSingleRow').autocomplete({
+		}); // $('#CountrySuggestions').autocomplete({
+		
+		$('#CountrySuggestionsSingleRow').autocomplete({
 			showHeader: true, 
 			minLength: 	1, 
-			delay: 		250,
+			delay: 		35,
 			source: function( request, response ){
-				z.ajax({
+				$.ajax({
 				  url: 		urlGeeCN_Real,
 				  dataType: "jsonp",
 				  data: {
-					country: 	z("#CountrySuggestionsSingleRow").val(),
-					id: 		my_gee_token,	
+					country: 	$("#CountrySuggestionsSingleRow").val(),
+					id: 		my_token,	
 					maxrecords: MAX_SHOW_RESULTS,
 					format: 	"jsonp",
 				},
@@ -1202,11 +602,13 @@ z(document).ready(function() {
 					
 						arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
 					
+						//arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="'+MAX_SHOW_RESULTS+'">');
+						
 						var string 			= JSON.stringify(data);
-						var obj 			= z.parseJSON(string);
+						var obj 			= $.parseJSON(string);
 						
 						var string2 		= JSON.stringify(obj.Results);
-						var obj2 			= z.parseJSON(string2);
+						var obj2 			= $.parseJSON(string2);
 						
 						var resultHtml 		= traverseCN2(obj2);
 
@@ -1215,11 +617,8 @@ z(document).ready(function() {
 						var pc_html 		= arr_pc_options.join("");
 						
 						//console.log("POSTALCOOOODEEE: " + pc_html);
-						z("#showCountryResultsSingleRow").html("");
-						z("#showCountryResultsSingleRow").val("");
-						z("#showCountryResultsSingleRow").html(pc_html);
-						z("#showCountryResultsSingleRow").show();
-
+						$("#showCountryResultsSingleRow").html(pc_html);
+						
 						// reset array
 						parts_pc 		= [];
 						
@@ -1235,7 +634,7 @@ z(document).ready(function() {
 									if (parts_pc_count >= 0){
 										parts_pc.push('<option selected value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
 										parts_pc.push('<option value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
 									}
@@ -1261,59 +660,57 @@ z(document).ready(function() {
 					} // success: function( data ){
 				})
 			}
-		}); // z('#CountrySuggestionsSingleRow').autocomplete({
+		}); // $('#CountrySuggestionsSingleRow').autocomplete({
 	
-	} // if (is_gee_enabled.indexOf("1") > -1){
-		
+	
 	function doGawsWebCall(){
 
-		if (n_gaws !== true){
-			var resAne 		= "Global Address Verification is not enabled.";
-			z("#errorresults_top").append(resAne);
-			z("#errorresults_top").css("display", "block");
-			z("#errorresults_top").fadeOut(6800);
-			return;
-		} // if (n_gaws !== true){
-		
 		var resultquality 		= "";
-		var content_locality 	= z("#billing\\:city").val();
-		var content_postalcode 	= z("#billing\\:postcode").val();
-		var content_street 		= z("#billing\\:street1").val();
-		var content_street2 	= z("#billing\\:street2").val();
-		var content_country 	= z("#billing\\:country_id").val();
-		var content_region 		= z("#billing\\:region_id").val();
-		//var content_subpremise	= z("#showAddressSubPremise").find(":selected").val();
+		var content_locality 	= $("#billing\\:city").val();
+		var content_postalcode 	= $("#billing\\:postcode").val();
+		var content_street 		= $("#billing\\:street1").val();
+		var content_street2 	= $("#billing\\:street2").val();
+		var content_country 	= $("#billing\\:country_id").val();
+		var content_region 		= $("#billing\\:region_id").val();
 		
-		content_locality 		= z.trim(content_locality);
-		content_postalcode 		= z.trim(content_postalcode);
-		content_street 			= z.trim(content_street);
-		content_street2 		= z.trim(content_street2);
-		content_country 		= z.trim(content_country);
-		content_region 			= z.trim(content_region);
+		content_locality 		= $.trim(content_locality);
+		content_postalcode 		= $.trim(content_postalcode);
+		content_street 			= $.trim(content_street);
+		content_street2 		= $.trim(content_street2);
+		content_country 		= $.trim(content_country);
+		content_region 			= $.trim(content_region);
 		
-			console.log("doGawsWebCall [Live]: Locality:"+content_locality+" Street: "+content_street +" Street2: "+content_street2+" PostalCode: "+content_postalcode+" Country: "+content_country);
-			z.ajax({
+		var cookiehash			= hashCode(content_locality)+hashCode(content_postalcode)+hashCode(content_street)+hashCode(content_street2)+hashCode(content_country);
+		var CookieAddrHash		= Cookies.get('MelissaDataMagento_GAWS_AddressHash');
+		
+		console.log("doGawsWebCall [none]: Locality:"+content_locality+" Street: "+content_street+" PostalCode: "+content_postalcode+" Country: "+content_country);
+		//console.log("doGawsWebCall [none]: cookiehash: "+cookiehash);
+		//console.log("doGawsWebCall [none]: CookieAddrHash: "+CookieAddrHash);
+		
+		if (content_locality.length >= 2 && content_postalcode.length >= 2 && content_street.length >= 2 && content_country.length >= 1 && cookiehash != CookieAddrHash){
+			console.log("doGawsWebCall [live]: Calling GAWS Webservice!");
+			$.ajax({
 				type:     "GET",
 				url:      urlGaws_Real,
 				dataType: 'jsonp',
-				async: 		true, //true,
+				async: 		true,
 				cache: 		false,
 				data: {
-					id: 		my_gaws_token,	
+					id: 		my_token,	
 					t:			"Melissa Data Magento Plugin - Address Check (SE)",
 					format: 	"json",
 					ctry: 		content_country,
 					a1:			content_street,
-					a2:			content_street2,
+					//a2:			content_street2,
 					postal: 	content_postalcode,
 					loc:		content_locality,
 				},
 				success: function( data ){
 						var string 			= JSON.stringify(data);
-						var obj 			= z.parseJSON(string);
+						var obj 			= $.parseJSON(string);
 											
 						var string2 		= JSON.stringify(obj.Records);
-						var obj2 			= z.parseJSON(string2);
+						var obj2 			= $.parseJSON(string2);
 				
 						var ResultCodes 	= obj2[0].Results;
 						var ArrResultCodes 	= ResultCodes.split(',');
@@ -1337,140 +734,82 @@ z(document).ready(function() {
 						var CountryISO3166_1_Alpha3 = obj2[0].CountryISO3166_1_Alpha3;
 						var CountryISO3166_1_Alpha2 = obj2[0].CountryISO3166_1_Alpha2;
 						var PremisesNumber	= obj2[0].PremisesNumber;
-						var SubPremisesNumber = obj2[0].SubPremisesNumber;
 						
-					//	console.log("doGawsWebCall [live][tid: "+randIdent+"] ResultCodes:" + ResultCodes + " FormAddr: "+ FormAddr);
-						if ( ResultCodes.match(/(AV23|AV24|AV25)/ig) != null ){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is a good address.";
-							html_result_gaws = '<span style="color: green; font-weight:bold;">'+resultquality+'</span>';
-																					
-							// if full verified GAWS address, then take that values and write them back
-							z("#billing\\:country_id").val(CountryISO3166_1_Alpha2);
-							z("#billing\\:street1").val(AddressLine1);
-							z("#billing\\:postcode").val(PostalCode);
-							z("#billing\\:city").val(Locality);
-							
-							// for special countries add the second AddressLine2 content
-							//if ( CountryISO3166_1_Alpha2.match(/(GB|UK|US|AU|NL)/ig) != null ){
-							//	z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for GB, US, AU & NL
-							//}
-							z.each(resCountry, function( index, value ) {
-								value = value.trim();
-								var iso = CountryISO3166_1_Alpha2.toLowerCase();
-								if (value.toLowerCase().indexOf(iso) != -1){
-									z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for resCountry like GB, US, AU & NL
-								} // if (value.toLowerCase().indexOf(iso) != -1){
-							}); // z.each(resCountry, function( index, value ) {
-						} else if ( ResultCodes.match(/(AV1|AE05|AV21|AV22)/ig) != null ){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> may or may not be a deliverable. <br> Please verify the address input.";
-							html_result_gaws = '<span style="color: orange; font-weight:bold;">'+resultquality+'</span>';		
-						} else if ( ResultCodes.match(/(AE..)/ig) != null && ResultCodes.match(/(AE05)/ig) == null){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is a bad address. <br> Please double check the address input.";
+						console.log("doGawsWebCall [live] ResultCodes:" + ResultCodes + " FormAddr: "+ FormAddr);
+						
+						if ( ResultCodes.match(/(AE..)/ig) != null ){
+							resultquality = "Address: "+FormAddr+" is not postal deliverable! <br />Please change your input address (Street, Premise, Suite, Locality, Postalcode)!";
 							html_result_gaws = '<span style="color: red; font-weight:bold;">'+resultquality+'</span>';
+						} else if ( ResultCodes.match(/(AV1|AE05|AV21|AV22)/ig) != null ){
+							resultquality = "Address: "+FormAddr+" has some errors in it! <br />Please consider checking your input (Street, Premise, Suite, Locality, Postalcode)!";
+							html_result_gaws = '<span style="color: orange; font-weight:bold;">'+resultquality+'</span>';
+						} else if ( ResultCodes.match(/(AV23|AV24|AV25)/ig) != null ){
+							resultquality = "Address: "+FormAddr+" is fully postal deliverable! <br /> You are great!";
+							html_result_gaws = '<span style="color: green; font-weight:bold;">'+resultquality+'</span>';
+							
+							// if full verified GAWS address, then take that values and write them back
+							$("#billing\\:country_id").val(CountryISO3166_1_Alpha2);
+							$("#billing\\:street1").val(AddressLine1);
+							//$("#billing\\:street2").val(AddressLine2);
+							$("#billing\\:postcode").val(PostalCode);
+							$("#billing\\:city").val(Locality);
 						}
-						z("#gawsresults_top").html("");
-						z("#gawsresults_top").html(html_result_gaws);
-						z("#gawsresults_top").css("display", "block");
-					} // success
-			}); // z.ajax({
-			return 0;
+						
+						$("#gawsresults").html("");
+						$("#gawsresults").html(html_result_gaws);
+						$("#gawsresults").css("display", "block");
+						
+						$("#gawsresults_top").html("");
+						$("#gawsresults_top").html(html_result_gaws);
+						$("#gawsresults_top").css("display", "block");
+						
+						// set cookie -> no double GAWS calls
+						Cookies.set('MelissaDataMagento_GAWS_AddressHash', "");
+						Cookies.set('MelissaDataMagento_GAWS_AddressHash', cookiehash);
+											
+						// later for each result code give the corresponding hint on what to improve for NON AV24/25 addresses
+						
+			/*				
+						$.each(ArrResultCodes, function( index, value ) {
+							value = value.trim();
+							if ( value.match(/AE/ig) != null ){
+								if (AEisDone==0){
+									AEisDone = 1;
+									tmpAdd = '<br /><b style="text-decoration: underline">Adressfehler:</b><br /><br />';
+								}								
+								stringToAddTemp = tmpAdd+"<li><b>"+value+"</b> -> "+errorcodes[value]['desc']+"</li>";
+								tmpAdd = "";
+							} else if ( value.match(/AV/ig) != null ){
+								if (AVisDone==0){
+									AVisDone = 1;
+									tmpAdd = '<br /><b style="text-decoration: underline">Validierungsebene:</b><br /><br />';
+								}
+								stringToAddTemp = tmpAdd+"<li><b>"+value+"</b> -> "+verifycodes[value]['desc']+"</li>";
+								tmpAdd = "";
+							}
+						
+							if ( value.match(/AE01/ig) != null ){ 
+								image_postalcode_notok = '<img alt="Nicht korrekt" title="Schlechte Ergebnisqualit\E4t" src="data:image/png;base64,'+red_notok+'"/>';
+							}
+							if ( value.match(/AE02/ig) != null ){ 
+								image_street_notok = '<img alt="Nicht korrekt" title="Schlechte Ergebnisqualit\E4t" src="data:image/png;base64,'+red_notok+'"/>';
+							}
+							if ( value.match(/AV13/ig) != null ){ 
+								image_street_notok = '<img alt="Gr\FCner Haken" title="Sehr gute Ergebnisse / Very good Quality" src="data:image/png;base64,'+green_ok+'"/>';
+							}
+							var n = stringToAddTemp.length;
+							if (n>3){
+								stringToAdd += stringToAddTemp;
+								stringToAddTemp = "";
+							}
+						});
+			*/			
+					} // success: function( data ){
+			}); // $.ajax({
+		}// if (locality == 1 && street == 1 && postcode == 1 && country == 1){
+		return;
 	} // doGawsWebCall
 	
-	
-	function doEmailWebCall(){
-
-		if (n_email !== true){
-			var resEne 	= "Global Email Validation is not enabled.";
-			z("#errorresults_top").append(resEne);
-			z("#errorresults_top").css("display", "block");
-			z("#errorresults_top").fadeOut(6800);
-			return;
-		} // if (n_email !== true){
-				
-		var resultquality 	= "";
-		var content_email 	= z("#billing\\:email").val();
-		
-		content_email 		= z.trim(content_email); //w@w.de is minimum
-	
-		var is_AtSign			= content_email.includes("@");
-		var is_DotSign			= content_email.includes(".");
-		
-			z.ajax({
-				type:     	"GET",
-				url:      	urlEmail_Real,
-				dataType: 	'jsonp',
-				async: 		true, //true,
-				cache: 		false,
-				data: {
-					id: 		my_email_token,	
-					t:			"Melissa Data Magento Plugin - Email Check (SE)",
-					opt:		"VERIFYMAILBOX:Express,DomainCorrection:On",
-					format: 	"json",
-					email:		content_email,
-				},
-				
-				// Email-Address:
-				//	Red:  EE0(1..5)
-				//	Yellow: ES07,ES04,ES20
-				//	Green: (ES01),ES21,ES22
-					
-				success: function( data ){
-						var string1 		= JSON.stringify(data);
-						var obj 			= z.parseJSON(string1);
-											
-						var string2 		= JSON.stringify(obj.Records);
-						var obj2 			= z.parseJSON(string2);
-				
-						var ResultCodes 	= obj2[0].Results;
-						var ArrResultCodes 	= ResultCodes.split(',');
-						
-						var EmailAddress	= obj2[0].EmailAddress;
-						var EmailMailbox	= obj2[0].MailboxName;
-						var EmailDomainName	= obj2[0].DomainName;
-						var EmailTLD		= obj2[0].TopLevelDomain;
-						var EmailTLDType	= obj2[0].TopLevelDomainName;
-			
-						var html_result_email = "";
-						
-						/*
-						*  Emails with Result Codes ES01 && ES20 together dont look very good						
- 						*/
-						var bad_email = 0;
-						z.each(ArrResultCodes, function( index, value ) {
-							value = value.trim();
-							if ( value.match(/ES01/ig) != null ){
-								bad_email++;
-							}
-							if ( value.match(/ES20/ig) != null ){
-								bad_email++;
-							}
-						})
-
-						var retVal = 0;
-						if ( ResultCodes.match(/(EE01|EE02|EE03|EE04|ES02|ES03|ES04|ES05|ES06|ES09)/ig) != null ){ // red traffic light
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is not a deliverable Email address.";
-							html_result_email = ' <span style="color: red; font-weight:bold;">'+resultquality+'</span>';
-							retVal = 0;
-						} else if ( ResultCodes.match(/(ES07|ES08)/ig) != null || bad_email == 2 ){ // yellow traffic light
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> may or may not be deliverable. <br>  The ISP is an accept-all or does not allow real-time verification.";
-							html_result_email = ' <span style="color: orange; font-weight:bold;">'+resultquality+'</span>';
-							retVal = 0;
-						} else if ( ResultCodes.match(/(ES01|ES20|ES21|ES22)/ig) != null && bad_email != 2 ){ // green traffic light -> removed ES20 on June 14th of 2016
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is found to be deliverable.";
-							html_result_email = ' <span style="color: green; font-weight:bold;">'+resultquality+'</span>';
-							retVal = 1;
-						}
-
-						//z("#gawsresults_top").html("");
-						z("#gawsresults_top").append(html_result_email);
-						z("#gawsresults_top").css("display", "block");
-												
-						return retVal;
-					} // success: function( data ){
-			}); // z.ajax({
-		return 0;
-	} // doEmailWebCall
-
 	function hashCode (str){
 		var hash = 0;
 		if (str.length == 0) return hash;
@@ -1481,49 +820,5 @@ z(document).ready(function() {
 		}
 		return hash;
 	} // function hashCode (str){
-	
-	// if user has clicked submit for doing Email & Gaws check
-	z("#submitCheck").click(function(){
-		var tmpEmail 	= doEmailWebCall(); // do Email processing
-		var tmpGaws 	= doGawsWebCall(); 	// do GAWS processing		  
-	}); // z("#submitCheck").click(function(){
-	
-	// if user has clicked continue to save billing information
-	z("#billing-buttons-container .button").click(function(){
-		
-		var content_locality 	= z("#billing\\:city").val();
-		var content_postalcode 	= z("#billing\\:postcode").val();
-		var content_street 		= z("#billing\\:street1").val();
-		var content_country 	= z("#billing\\:country_id").val();
-		
-		var content_firstname	= z("#billing\\:firstname").val();
-		var content_lastname 	= z("#billing\\:lastname").val();
-		var content_email 		= z("#billing\\:email").val();
-		
-		var is_AtSign			= content_email.includes("@");
-		var is_DotSign			= content_email.includes(".");
-		
-		if (content_locality.length >= 2 && content_postalcode.length >= 2 && content_street.length >= 2 && content_country.length >= 1 && content_email.length >= 6 && is_AtSign === true && is_DotSign === true){	
-						
-			z("#autocomplete_melissadata_fielded").hide();
-			z("#autocomplete_melissadata_singlerow").hide();
-			z("#autocomplete_melissadata_fielded").css("display", "none");		
-			z("#autocomplete_melissadata_singlerow").css("display", "none");
-			
-			z("#singleShow").hide();
-			z("#singleShow").css("display", "none");		
-			z("#multiShow").hide();
-			z("#multiShow").css("display", "none");		
-			
-			z("#gawsresults_top").hide();
-			z("#gawsresults_top").css("display", "none");		
-			
-			z("#submitCheck").hide();
-			z("#submitCheck").css("display", "none");		
-						
-			//alert("Button pressed");
-			
-		} // if check
-	}); // z("#submitCheck").click(function(){
-	
+
 }); // $(document).ready(function() {

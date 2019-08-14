@@ -8,8 +8,7 @@
 	 	<action method="addJs">
 			<script>melissadata/Magento.js</script>
 			<params><![CDATA[name="js9999_last"]]></params>
-		</action>
-		 <block type="core/template" name="newReferenceBlock" template="page/melissa_plugin.phtml" />  
+		</action>  
         </reference>
 <!--	 
 	<reference name="root">
