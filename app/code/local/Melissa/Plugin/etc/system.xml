@@ -5,7 +5,7 @@ Melissa Data Plugin for Magento: System XML Library
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-07-07//12:30am
+Last Modified: 	2016-07-12//10:30am
 */
 -->
 <config>
@@ -85,17 +85,17 @@ Last Modified: 	2016-07-07//12:30am
                             <show_in_store>1</show_in_store>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </gee_use_multi>
-                   <!--     
+                        
                         <singlelinecountries translate="label comment">
                             <label>List of Countries for Single Line:</label>
-                            <comment>Use Single Line Autocompletion for those countries.</comment>
+                            <comment>Use Single Line Autocompletion for those countries (Input only ISO2 Codes).</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </singlelinecountries>
-                   -->                             
+                                                
                         <email translate="label">
                             <label>Use Email Verification:</label>
                             <comment>Enable Email Validation on Checkout.</comment>

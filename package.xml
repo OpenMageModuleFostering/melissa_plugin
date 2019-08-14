@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Melissa_Plugin</name>
-    <version>0.9.4.1</version>
+    <version>0.9.5.1</version>
     <stability>beta</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -12,7 +12,7 @@
     <authors><author><name>Sebastian Enger</name><user>melissadata</user>
 	<email>Sebastian.Enger@MelissaData.com</email></author>
 	</authors>
-    <date>2016-07-05</date>
+    <date>2016-07-11</date>
     <time>11:24:03</time>
     <contents><target name="mage"></target></contents>
     <compatible/>
