@@ -3,7 +3,7 @@ Melissa Data Javascript Library for Magento Plugin
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-03//14:30pm
+Last Modified: 	2016-07-12//10:30am
 */
 
 //$.noConflict();
@@ -74,8 +74,6 @@ z(document).ready(function() {
 		
 		var resCountry 							= gee_singlerow_country.split(","); 
 		
-		//console.log("GEE multi: "+n_gee_multi + " Cookie Gee Mutli: " +gee_use_multi);
-		
 		/*
 		 * Set the correspondig Melissa Data Secure Service Endpoints
 		 * */	
@@ -93,31 +91,20 @@ z(document).ready(function() {
 		// Global Email Verification
 		var urlEmail_Real	= "https://globalemail.melissadata.net/v3/WEB/GlobalEmail/doGlobalEmail";
 		
-		var insert_string_single = '<br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="singleShow">Melissa Data Single Row Autocompletion</b></tr><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Type Address" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showAddressSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br />';
-		
-		var insert_string_multi = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="multiShow">Melissa Data Fielded Autocompletion</b></tr><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Type Country" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Type Street Address" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="4. Choose Suite" title="Choose an Apartment Number for that Address" id="SubBuildingSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showSubPremise" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></tr></table></p><br /><br /><p>';
-			
-			// SubBuildingSuggestions
-			// showSubPremise
-			
-		// set the sub premise field to not visible
-		z("#showAddressSubPremise").hide();
-		z("#showAddressSubPremise").css("display", "none");		
-		
-		z("#SubBuildingSingleRow").hide();
-		z("#SubBuildingSingleRow").css("display", "none");		
-		
-		z("#SubBuildingSuggestions").hide();
-		z("#SubBuildingSuggestions").css("display", "none");		
-	
-		z("#showSubPremise").hide();
-		z("#showSubPremise").css("display", "none");	
-	
+		var insert_string_single = '<br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="singleShow">Melissa Data Single Row Autocompletion Support:</b></tr><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type House Number and Street Name" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br />';
+		var insert_string_multi = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tr style="font-weight: bold; font-size: 140%;"><b id="multiShow">Melissa Data Fielded Autocompletion Support:</b></tr><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Step: Type House Number and Street Name" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><p>';
+					
+		//	alert("Plugin:"+gee_singlerow_cntry);	
+		//	alert("Plugin (n_gee):"+n_gee+"(n_gee_single): "+n_gee_single+" n_gee_multi	: "+n_gee_multi	);	
+				
 		if (n_gee === true){
 			// set display to SHOW content
 			z("#checkout-step-billing").css("display", "inline");
 			z("#billing\\:region_id").css("display", "inline");
-									
+			
+			// append our Autocompletion field to Magento top					
+			//var insert_string = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Fielded Autocompletion Support:</b></tbody><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Step: Type House Number and Street Name" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><br /><br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Single Row Autocompletion Support:</b></tbody><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type House Number and Street Name" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><span id="gawsresults_top" xstyle="display:none;"></span><br />';
+						
 			z( insert_string_single ).insertBefore("#checkout-step-billing");
 			z( insert_string_multi ).insertBefore("#checkout-step-billing");
 			
@@ -130,35 +117,25 @@ z(document).ready(function() {
 			z("#singleShow").css("display", "none");		
 			z("#multiShow").hide();
 			z("#multiShow").css("display", "none");		
-			
-			if ( n_gee_single === true && n_gee_multi === true) { 
-				
-				// both enabled? 
-				z("#multiShow").show();
-				z("#multiShow").css("display", "inline");
-				z("#autocomplete_melissadata_fielded").show();
-				z("#autocomplete_melissadata_fielded").css("display", "inline");
-				
-				z("#singleShow").show();
-				z("#singleShow").css("display", "inline");
-				z("#autocomplete_melissadata_singlerow").show();
-				z("#autocomplete_melissadata_singlerow").css("display", "inline");
-								
-			} else if (n_gee_single === true ){
+						
+			if (n_gee_single === true ){
+			//	var insert_string_single = '<br /><p><table id="autocomplete_melissadata_singlerow" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Single Row Autocompletion Support:</b></tbody><tr width="" style="clear:both;"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResultsSingleRow" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type House Number and Street Name" title="Start typing a Postal code & Address to get Suggestions from within that Country" id="AddressSuggestionsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px;" /><span id="showAddressResultsSingleRow" style="width: '+MAX_LENGTH_GEE_SINGLELINE_BLOCK+'px; height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br />';
 			//	z( insert_string_single ).insertBefore("#checkout-step-billing");
 				z("#singleShow").show();
 				z("#singleShow").css("display", "inline");
 				z("#autocomplete_melissadata_singlerow").show();
 				z("#autocomplete_melissadata_singlerow").css("display", "inline");
-				z("#autocomplete_melissadata_fielded").hide();
-				z("#autocomplete_melissadata_fielded").css("display", "none");
+				//z("#autocomplete_melissadata_fielded").hide();
+				//z("#autocomplete_melissadata_fielded").css("display", "none");
 			} else if (n_gee_multi === true ){
+			//	var insert_string_multi = '<br /><p><table id="autocomplete_melissadata_fielded" border="0px;"><tbody style="font-weight: bold; font-size: 140%;"><b>Melissa Data Fielded Autocompletion Support:</b></tbody><tr width="'+(3*MAX_LENGTH_GEE_FIELDED_BLOCK)+'px"><td><br /></td></tr><tr style="clear:both;"><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="1. Step: Type Country Name" title="Start typing a country name to get Suggestions" id="CountrySuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showCountryResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="2. Step: Type Postal Code" title="Start typing a Postal code to get Suggestions from within that Country" id="PostalCodeSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showPostalCodeResults" style="width:150px;height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td><td width="'+MAX_LENGTH_GEE_FIELDED_BLOCK+'px"><input type="text" value="" placeholder="3. Step: Type House Number and Street Name" title="Start typing a street name to get suggestions for them within that Postal code range in that country" id="StreetSuggestions" style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" /><span id="showStreetResults" style="height:75px;line-height:3em;overflow:auto;padding:5px;"></span></td></tr></table></p><br /><br /><p>';
+			//	z( insert_string_multi ).insertBefore("#checkout-step-billing");
 				z("#multiShow").show();
 				z("#multiShow").css("display", "inline");
 				z("#autocomplete_melissadata_fielded").show();
 				z("#autocomplete_melissadata_fielded").css("display", "inline");
-				z("#autocomplete_melissadata_singlerow").hide();
-				z("#autocomplete_melissadata_singlerow").css("display", "none");
+				//z("#autocomplete_melissadata_singlerow").hide();
+				//z("#autocomplete_melissadata_singlerow").css("display", "none");
 			} else { // not GEE and not GEE Multi
 				z("#autocomplete_melissadata_singlerow").hide();
 				z("#autocomplete_melissadata_singlerow").css("display", "none");
@@ -170,15 +147,23 @@ z(document).ready(function() {
 			
 		if (n_gaws === true && n_email === true){
 			
-			var insert_top_gawsresults = '<form id="formaction"><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
+			var insert_top_gawsresults = '<form id="formaction"><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify Now "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
 			z( insert_top_gawsresults ).insertBefore("#checkout-step-billing");	
+		
+		//	var insert_gawsresults = '<br /><span id="gawsresults"></span>';
+		//	z( insert_gawsresults ).insertAfter("#billing\\:fax");	
+		
 			// set display to SHOW content
 			z("#checkout-step-billing").css("display", "inline");
 			z("#billing\\:region_id").css("display", "inline");
 					
 		} else if (n_gaws === true){				
-			var insert_top_gawsresults = '<form><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
+			var insert_top_gawsresults = '<form><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify Now "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
 			z( insert_top_gawsresults ).insertBefore("#checkout-step-billing");	
+		
+		//	var insert_gawsresults = '<br /><span id="gawsresults"></span>';
+		//	z( insert_gawsresults ).insertAfter("#billing\\:fax");	
+		
 			// set display to SHOW content
 			z("#checkout-step-billing").css("display", "inline");
 			z("#billing\\:region_id").css("display", "inline");
@@ -186,6 +171,10 @@ z(document).ready(function() {
 		} else if (n_email === true){  // if (n_gaws === true){					
 			var insert_top_emailresults = '<form><input type="button" id="submitCheck" title="Verify now the Input Address Values" value=" Verify Now "></form><br /><span id="gawsresults_top" style="display:none;"></span><br /><span id="errorresults_top" style="display:none;"></span>';
 			z( insert_top_emailresults  ).insertBefore("#checkout-step-billing");	
+		
+		//	var insert_emailresults = '<br /><span id="gawsresults"></span>';
+		//	z( insert_emailresults ).insertAfter("#billing\\:fax");	
+		
 			// set display to SHOW content
 			z("#checkout-step-billing").css("display", "inline");
 			z("#billing\\:region_id").css("display", "inline");
@@ -193,7 +182,7 @@ z(document).ready(function() {
 			
 							
 		// Set the Country ISO 2 Code Result from GEE Country to corresponding Magento Field
-		z("#showCountryResults").on("click", function(){
+		z('#showCountryResults').on("click", function(){
 			var iso2Code 		= z("#showCountryResults").find(":selected").val();
 			var isoName 		= z("#showCountryResults").find(":selected").text();
 			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
@@ -206,19 +195,19 @@ z(document).ready(function() {
 				
 			// if iso2Code == resCountry element -> then: show Single Line Entry && disable Fielded Entry && take current Country input and push that to Single line input
 			var singleLineFlag = 0;
-		/*	
 			z.each(resCountry, function( index, value ) {
 				value = value.trim();
 				var iso = iso2Code.toLowerCase();
 				if (value.toLowerCase().indexOf(iso) != -1){
-					//singleLineFlag = 1;
+					singleLineFlag = 1;
 				}
 			});
-		*/
 			
 			if (singleLineFlag == 1){
 			
 				z("#billing\\:country_id").html(html_country);
+						
+				// show single line entry
 				z("#autocomplete_melissadata_singlerow").show();
 				
 				// disable multi line entry / disable fielded Entry
@@ -274,12 +263,12 @@ z(document).ready(function() {
 				// reset the search box, because we have a valid input
 				//z("#showCountryResults").val("");
 				//z("#showCountryResults").html("");
-				z("#showCountryResults").hide();
+				z("#showCountryResults").hide()
 			}
 		
 			//console.log("checking selected option: #showCountryResults:"+html_country);
 			
-			res = "Country selected.";
+			res = "Country has been chosen.";
 			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
 				
 			z("#gawsresults_top").html(html_result_gaws);
@@ -287,146 +276,8 @@ z(document).ready(function() {
 				
 		}); // z('#showCountryResults').on("click", function(){
 		
-		// set the suite number to the corresponding field
-		z("#showAddressSubPremise").on("click", function(){
-			var subbuilding 	= z("#showAddressSubPremise").find(":selected").val();
-			var deliveryaddr	= z("#showAddressResultsSingleRow").find(":selected").attr("deliver");
-			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-			var pc_sec			= z("#showAddressSubPremise").find(":selected").attr("pc_sec");
-			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
-			
-			// take address & append apt
-			z("#billing\\:street1").val("");
-			z("#billing\\:street1").html("");
-			
-			// GB/UK related
-			var organization	= z("#showAddressResultsSingleRow").find(":selected").attr("organization");
-			var building		= z("#showAddressResultsSingleRow").find(":selected").attr("building");
-			var premise			= z("#showAddressResultsSingleRow").find(":selected").attr("premise");
-			var thoroughfare	= z("#showAddressResultsSingleRow").find(":selected").attr("thoroughfare");
-			
-			if (pc_sec.length > 2 && iso2Code.toLowerCase().indexOf("us") != -1){
-					z("#billing\\:postcode").val("");
-					z("#billing\\:postcode").html("");
-					z("#billing\\:postcode").val(pc_sec);
-					console.log("Setting Postal Code ZIP9:" +pc_sec);
-			}
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				b.push(subbuilding);
-				//b.push(premise);
-				//b.push(thoroughfare);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-			} else { // all other countries
-				
-				console.log("Set apartment number with street2: "+subbuilding);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val(subbuilding);
-			
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-						
-			z("#SubBuildingSingleRow").val("");
-			z("#SubBuildingSingleRow").html("");
-			z("#SubBuildingSingleRow").val(subbuilding);
-			
-			z("#showAddressSubPremise").val("");
-			z("#showAddressSubPremise").html("");		
-			z("#showAddressSubPremise").val(subbuilding);	
-			
-			res = "Suite selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");	
-			
-		}); // z("#showAddressSubPremise").on("click", function(){
-		
-		// set the suite number to the corresponding field
-		z("#showSubPremise").on("click", function(){
-			var subbuilding 	= z("#showSubPremise").find(":selected").val();
-			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-			var pc_sec			= z("#showSubPremise").find(":selected").attr("pc_sec");
-			
-			//var deliveryaddr	= z("#showStreetResults").find(":selected").attr("deliver");
-			//var deliveryaddr	= Cookies.get('MelissaDataMagento_deliveryaddr');
-			var deliveryaddr	= Cookies.get('MelissaDataMagento_deliveryaddr');
-			var iso2Code 		= z("#showCountryResults").find(":selected").val();
-			
-			// take address & append apt
-			z("#billing\\:street1").val("");
-			z("#billing\\:street1").html("");
-			
-			// GB/UK related
-			var organization	= z("#showStreetResults").find(":selected").attr("organization");
-			var building		= z("#showStreetResults").find(":selected").attr("building");
-			var premise			= z("#showStreetResults").find(":selected").attr("premise");
-			var thoroughfare	= z("#showStreetResults").find(":selected").attr("thoroughfare");
-			
-			if (pc_sec.length > 2 && iso2Code.toLowerCase().indexOf("us") != -1){
-					z("#billing\\:postcode").val("");
-					z("#billing\\:postcode").html("");
-					z("#billing\\:postcode").val(pc_sec);
-					console.log("Setting Postal Code ZIP9:" +pc_sec);
-			}
-			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				b.push(subbuilding);
-				//b.push(premise);
-				//b.push(thoroughfare);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-			} else { // all other countries
-				console.log("Set apartment number with street2: "+subbuilding + " and delivery: " +deliveryaddr);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val(subbuilding);
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-						
-			z("#SubBuildingSuggestions").val("");
-			z("#SubBuildingSuggestions").html("");
-			z("#SubBuildingSuggestions").val(subbuilding);
-			
-			z("#showSubPremise").val("");
-			z("#showSubPremise").html("");		
-			z("#showSubPremise").val(subbuilding);	
-			
-			res = "Suite selected.";
-			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-				
-			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");
-		}); // z("#showSubPremise").on("click", function(){
-		
 		// set the postal code from the GEE Postal Code Endpoint to Magento fields
-		z("#showPostalCodeResults").on("click", function(){
+		z('#showPostalCodeResults').on("click", function(){
 			var locality 		= z("#showPostalCodeResults").find(":selected").val();
 			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
 						
@@ -439,9 +290,9 @@ z(document).ready(function() {
 			z("#PostalCodeSuggestions").html("");
 			z("#PostalCodeSuggestions").val(postalcode+", "+locality);
 
-			z("#billing\\:country_id").html(html_country);
-			z("#billing\\:city").val(locality);
-			z("#billing\\:postcode").val(postalcode);
+			z(".field .input-box #billing\\:country_id").html(html_country);
+			z(".field .input-box #billing\\:city").val(locality);
+			z(".field .input-box #billing\\:postcode").val(postalcode);
 			
 			// reset street if clicked to postal code
 			z("#billing\\:street1").val("");
@@ -457,14 +308,18 @@ z(document).ready(function() {
 
 			// reset the search box, because we have a valid input
 			z("#showPostalCodeResults").hide();
-			res = "Postal Code selected.";
+
+			//console.log("checking selected option: #showPostalCodeResults:"+html_country);
+			
+			res = "Postal Code has been chosen.";
 			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
 				
 			z("#gawsresults_top").html(html_result_gaws);
-			z("#gawsresults_top").css("display", "block");		
+			z("#gawsresults_top").css("display", "block");	
+			
 		}); // z('#showPostalCodeResults').on("click", function(){
 		
-		z("#showCountryResultsSingleRow").on("click", function(){		
+		z('#showCountryResultsSingleRow').on("click", function(){		
 			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
 			var isoName 		= z("#showCountryResultsSingleRow").find(":selected").text();
 			
@@ -481,242 +336,83 @@ z(document).ready(function() {
 			
 			// set focus to address input field
 			z("#AddressSuggestionsSingleRow").focus();
-			z("#showAddressResultsSingleRow").focus();
-			z("#AddressResultsSingleRow").focus();
+			z('#showAddressResultsSingleRow').focus();
+			z('#AddressResultsSingleRow').focus();
 
 			// reset the search box, because we have a valid input
 			z("#showCountryResultsSingleRow").hide();
 
-			res = "Country selected.";
+			//console.log("checking selected option: #showCountryResultsSingleRow:"+iso2Code+" "+isoName);
+			
+			res = "Country has been chosen.";
 			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
 				
 			z("#gawsresults_top").html(html_result_gaws);
 			z("#gawsresults_top").css("display", "block");	
+			
 		}); // z('#showPostalCodeResults').on("click", function(){
 		
 		// set the street information from the GEE Address Endpoint to Magento fields
-		z("#showStreetResults").on("click", function(){
+		z('#showStreetResults').on("click", function(){
 		
-			//alert("in showAddressResultsSingleRow");
-			var takeaddr		= z("#showStreetResults").find(":selected").val();
-			var locality 		= z("#showStreetResults").find(":selected").attr("loc");
+			var locality 		= z("#showPostalCodeResults").find(":selected").val();
+			//var postalcode 	= z("#showPostalCodeResults").find(":selected").text();
 			var postalcode 		= z("#showPostalCodeResults").find(":selected").attr("pc");
-			//var postalcode 	= z("#showStreetResults").find(":selected").attr("pc");
-			var pc_sec_tmp		= z("#showStreetResults").find(":selected").attr("pc_sec");
-			var deliveryaddr	= z("#showStreetResults").find(":selected").attr("deliver");
-			var adminarea		= z("#showStreetResults").find(":selected").attr("aarea");
-			var simpleaddr		= z("#showStreetResults").find(":selected").attr("simpleaddr");
-			var subbuilding_tmp	= z("#showStreetResults").find(":selected").attr("subbuilding");
-			var subbuilding		= subbuilding_tmp.split(",");
-			var pc_sec			= pc_sec_tmp.toString().split(",");
+			var deliveryaddr	= z("#showStreetResults").find(":selected").text();
+			var adminarea		= z("#showPostalCodeResults").find(":selected").attr("aarea");
+			var adminarea_name	= z("#showStreetResults").find(":selected").attr("aarea");
 			
-			console.log("Postalcode: #showStreetResults " + postalcode);
-					
 			var iso2Code 		= z("#showCountryResults").find(":selected").val();
 			var isoName 		= z("#showCountryResults").find(":selected").text();
 			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
-			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea+'</option>';
+			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea_name+'</option>';
 			
-			Cookies.set('MelissaDataMagento_deliveryaddr', deliveryaddr);
-						
-			// GB related
-			var organization	= z("#showStreetResults").find(":selected").attr("organization");
-			var building		= z("#showStreetResults").find(":selected").attr("building");
-			//var subbuild		= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var premise			= z("#showStreetResults").find(":selected").attr("premise");
-			var thoroughfare	= z("#showStreetResults").find(":selected").attr("thoroughfare");
+			z(".field .input-box #billing\\:city").val(locality);
+			z(".field .input-box #billing\\:postcode").val(postalcode);
+			z("#billing\\:street1").val(deliveryaddr);
+			z(".field .input-box #billing\\:country_id").html(html_country);
+			z(".field .input-box #billing\\:region_id").html(html_state);
 			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				//b.push(subbuild);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				
-				console.log("GB Postalcode: #showStreetResults " + postalcode);
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-				
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:country_id").html(html_country);
-				
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-			
-				//z("#billing\\:region_id").html(html_state); // not required in GB
-			
-			} else { // all other countries
-				
-				console.log("not GB Postalcode: #showStreetResults " + postalcode);
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val("");
-				z("#billing\\:country_id").html(html_country);
-				//z("#billing\\:region_id").html(html_state);
-				//z("#billing\\:region").html(html_state);
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-				
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-					
 			// on field click of Country Iso Search field, put the results in the top of the country search box
 			z("#StreetSuggestions").val("");
 			z("#StreetSuggestions").html("");
-			z("#StreetSuggestions").val(takeaddr);
-			
-			z("#showStreetResults").val("");
-			z("#showStreetResults").html("");
-			z("#showStreetResults").val(takeaddr);
+			z("#StreetSuggestions").val(deliveryaddr);
 
-			res = "Address selected.";
+			// reset the search box, because we have a valid input
+			z("#showStreetResults").hide();
+	
+			//console.log("checking selected option: #showStreetResults:"+html_country);
+
+			res = "Street & House Number have been chosen.";
 			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
-							
+				
 			z("#gawsresults_top").html(html_result_gaws);
 			z("#gawsresults_top").css("display", "block");	
 			
-			// set focus to address input field
-			z("#SubBuildingSuggestions").focus();
-			z("#showSubPremise").focus();
-			
-			//console.log("code before suite number check");
-			// if iso2Code == resCountry element -> then: show the suite or apartment numbers
-			var singleLineFlag = 1; // have set it to 1 standard because we removed single line countries
-			
-			/*
-			z.each(resCountry, function( index, value ) {
-				value = value.trim();
-				var iso = iso2Code.toLowerCase();
-				if (value.toLowerCase().indexOf(iso) != -1){
-				//	alert("Suite number check valid");
-					// that means show the premise number
-					singleLineFlag = 1;
-				} // if (value.toLowerCase().indexOf(iso) != -1){
-			}); // z.each(resCountry, function( index, value ) {
-			*/
-			
-			// if we have a single line country and the first element of the subbuilding array holds a valid key
-			if (singleLineFlag == 1 && typeof subbuilding[0] != "undefined" && subbuilding[0] != null && subbuilding[0].length > 0){
-				//console.log("I am in Suite Show Code");
-				
-				var parts_addr 			= new Array();
-				var parts_addr_count	= 1;
-				var select_block_size 	= MAX_LENGTH_GEE_SINGLELINE_BLOCK + 100;
-				parts_addr.push('<select style="width: '+select_block_size+'px;" size="25">');
-				
-				z.each(subbuilding, function( index, value ) {
-					value = value.trim();				
-					var pc_sec_val = postalcode+"-"+pc_sec[index];
-					if (((typeof value != "undefined") && (typeof value.valueOf() == "string")) && (value.length >= 1)) {
-						if (parts_addr_count >= 0){
-							parts_addr.push('<option selected pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-							parts_addr.push('<option pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						}
-					} // if strict check
-				}); // z.each(resCountry, function( index, value ) {
-			
-				parts_addr.push('</select>');
-				var addr_html 	= parts_addr.join("");
-				
-				// set focus to apartment number input field
-				z("#SubBuildingSuggestions").focus();
-				z("#showSubPremise").focus();
-			
-				z("#showSubPremise").html("");
-				z("#showSubPremise").val("");
-				z("#showSubPremise").html(addr_html);
-				z("#showSubPremise").css("display", "inline");	
-				z("#showSubPremise").show();				
-			
-			} // if (singleLineFlag == 1 && subbuilding.length >= 1){
-							
 		//	console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode, "Addr:"+deliveryaddr);
 		}); // z('#showStreetResults').on("click", function(){
 		
 		// set the street information from the GEE Free Form Endpoint to Magento fields
-		z("#showAddressResultsSingleRow").on("click", function(){
-					
-			//alert("in showAddressResultsSingleRow");
-			var takeaddr		= z("#showAddressResultsSingleRow").find(":selected").val();
+		z('#showAddressResultsSingleRow').on("click", function(){
 			var locality 		= z("#showAddressResultsSingleRow").find(":selected").attr("loc");
 			var postalcode 		= z("#showAddressResultsSingleRow").find(":selected").attr("pc");
-			var pc_sec_tmp		= z("#showAddressResultsSingleRow").find(":selected").attr("pc_sec");
 			var deliveryaddr	= z("#showAddressResultsSingleRow").find(":selected").attr("deliver");
 			var adminarea		= z("#showAddressResultsSingleRow").find(":selected").attr("aarea");
 			var simpleaddr		= z("#showAddressResultsSingleRow").find(":selected").attr("simpleaddr");
-			var subbuilding_tmp	= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var subbuilding		= subbuilding_tmp.split(",");
-			var pc_sec			= pc_sec_tmp.toString().split(",");
-			//console.log("PC SEC VALUES: "+pc_sec);
-				
+			var takeaddr		= z("#showAddressResultsSingleRow").find(":selected").val();
+			
 			var iso2Code 		= z("#showCountryResultsSingleRow").find(":selected").val();
 			var isoName 		= z("#showCountryResultsSingleRow").find(":selected").text();
 			var html_country 	= '<option selected value="'+iso2Code+'">'+isoName+'</option>';
 			var html_state 		= '<option selected value="'+adminarea+'">'+adminarea+'</option>';
-						
-			// GB related
-			var organization	= z("#showAddressResultsSingleRow").find(":selected").attr("organization");
-			var building		= z("#showAddressResultsSingleRow").find(":selected").attr("building");
-			//var subbuild		= z("#showAddressResultsSingleRow").find(":selected").attr("subbuilding");
-			var premise			= z("#showAddressResultsSingleRow").find(":selected").attr("premise");
-			var thoroughfare	= z("#showAddressResultsSingleRow").find(":selected").attr("thoroughfare");
 			
-			if (iso2Code.toLowerCase().indexOf("gb") != -1){
-				
-				var a = new Array();
-				a.push(organization);
-				a.push(building);
-				//a = z.grep(a,function(n){ return n == 0 || n });
-				a = a.filter(function(e){return e}); 
-				var a_html 	= a.join(",");
-						
-				var b = new Array();
-				//b.push(subbuild);
-				b.push(premise + " " + thoroughfare);
-				//b = z.grep(b,function(n){ return n == 0 || n });
-				b = b.filter(function(e){return e}); 
-				var b_html 	= b.join(",");
-				
-				z("#billing\\:street1").val(a_html);
-				z("#billing\\:street2").val(b_html);
-				
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:country_id").html(html_country);
-				
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
+			z(".field .input-box #billing\\:city").val(locality);
+			z(".field .input-box #billing\\:postcode").val(postalcode);
+			z("#billing\\:street1").val(deliveryaddr);
+			z("#billing\\:street2").val();
+			z(".field .input-box #billing\\:country_id").html(html_country);
+			z(".field .input-box #billing\\:region_id").html(html_state);
 			
-				//z("#billing\\:region_id").html(html_state); // not required in GB
-			
-			} else { // all other countries
-				z("#billing\\:city").val(locality);
-				z("#billing\\:postcode").val(postalcode);
-				z("#billing\\:street1").val(deliveryaddr);
-				z("#billing\\:street2").val("");
-				z("#billing\\:country_id").html(html_country);
-				//z("#billing\\:region_id").html(html_state);
-				//z("#billing\\:region").html(html_state);
-				//z("#billing\\:region_id").html(adminarea);
-				//z("#billing\\:region").html(adminarea);
-				
-			} // if (iso2Code.toLowerCase().indexOf("gb") != -1){
-					
 			// on field click of Country Iso Search field, put the results in the top of the country search box
 			z("#AddressSuggestionsSingleRow").val("");
 			z("#AddressSuggestionsSingleRow").html("");
@@ -725,74 +421,29 @@ z(document).ready(function() {
 			// reset the search box, because we have a valid input
 			z("#showAddressResultsSingleRow").hide();
 
+			//console.log("checking selected option: #showAddressResultsSingleRow:"+html_country);
+			//console.log("PostalCode Click: locality:"+locality, "postalcode:" + postalcode, "Addr:"+deliveryaddr);
+			
 			res = "Street and House Number have been chosen.";
 			html_result_gaws = '<span style="color: green; font-weight:bold;">'+res+'</span>';
 				
 			z("#gawsresults_top").html(html_result_gaws);
 			z("#gawsresults_top").css("display", "block");	
 			
-			//console.log("code before suite number check");
-			// if iso2Code == resCountry element -> then: show the suite or apartment numbers
-			var singleLineFlag = 1; // have set it to 1 standard because we removed single line countries
-			
-			/*
-			z.each(resCountry, function( index, value ) {
-				value = value.trim();
-				var iso = iso2Code.toLowerCase();
-				if (value.toLowerCase().indexOf(iso) != -1){
-				//	alert("Suite number check valid");
-					// that means show the premise number
-					singleLineFlag = 1;
-				} // if (value.toLowerCase().indexOf(iso) != -1){
-			}); // z.each(resCountry, function( index, value ) {
-			*/
-			
-			// if we have a single line country and the first element of the subbuilding array holds a valid key
-			if (singleLineFlag == 1 && typeof subbuilding[0] != "undefined" && subbuilding[0] != null && subbuilding[0].length > 0){
-				//console.log("I am in Suite Show Code");
+		}); // z('#showStreetResults').on("click", function(){
+		
+		// later add validity check for Timestamp so that we make sure token is valid for request
+		// if cookie is undefined, that means no cookie is existing with valid information		
+		
+		/*
+		if ( isGeeTokenCookie == undefined || isGeeTimeStampCookie == undefined  ) { 	
+		} // if ( isGeeTokenCookie == undefined || isGeeTimeStampCookie == undefined  ) { 
+		*/
 				
-				var parts_addr 			= new Array();
-				var parts_addr_count	= 1;
-				var select_block_size 	= MAX_LENGTH_GEE_SINGLELINE_BLOCK + 100;
-				parts_addr.push('<select style="width: '+select_block_size+'px;" size="25">');
-				
-				z.each(subbuilding, function( index, value ) {
-					value = value.trim();				
-					var pc_sec_val = postalcode+"-"+pc_sec[index];
-					console.log("PC SEC VAL of INDEX: "+pc_sec_val + " INDEX:" + index);
-					
-					if (((typeof value != "undefined") && (typeof value.valueOf() == "string")) && (value.length >= 1)) {
-						if (parts_addr_count >= 0){
-							parts_addr.push('<option selected pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-							parts_addr.push('<option pc_sec="'+pc_sec_val+'" value="'+value+'">'+value+'</option>');
-							parts_addr_count++;
-						}
-					} // if strict check
-				}); // z.each(resCountry, function( index, value ) {
-			
-				parts_addr.push('</select>');
-				var addr_html 	= parts_addr.join("");
-				
-				// set focus to apartment number input field
-				z("#SubBuildingSingleRow").focus();
-				z("#showAddressSubPremise").focus();
-			
-				z("#showAddressSubPremise").html("");
-				z("#showAddressSubPremise").val("");
-				z("#showAddressSubPremise").html(addr_html);
-				z("#showAddressSubPremise").css("display", "inline");	
-				z("#showAddressSubPremise").show();				
-			
-			} // if (singleLineFlag == 1 && subbuilding.length >= 1){
-			
-		}); //z("#showAddressResultsSingleRow").on("click", function(){
-						
 	// if the config admin option says, we are allowed to use GEE then please use it
 	if (n_gee === true){
 				
-		z("#AddressSuggestionsSingleRow").autocomplete({
+		z('#AddressSuggestionsSingleRow').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
 			delay: 			250,
@@ -854,23 +505,17 @@ z(document).ready(function() {
 								simpleaddr 	= o.Address2;
 								loc 		= o.Locality;
 								pc 			= o.PostalCode;
-								pc_sec		= o.PostalCodeSecondary;
 								aarea 		= o.AdministrativeArea;
 								deliver 	= o.DeliveryAddress;
-								subbuilding = o.SubBuilding;
-								organization = o.Organization;
-								building	= o.Building;
-								premise		= o.Premise;
-								tn			= o.Thoroughfare;
 								
 								//console.log("cntryyy: "+cntryyy+" loc="+lc+" pc="+pc+" simpleaddr="+simpleaddr+" aarea="+aarea+" deliver="+deliver);
 								//addr = o.DeliveryAddress;
 								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
 									if (parts_addr_count >= 0){
-										parts_addr.push('<option selected value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
+										parts_addr.push('<option selected value="'+addr+'" loc="'+loc+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
 										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-										parts_addr.push('<option value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
+									} else if ( parts_addr_count >= 2 && parts_addr_count <= MAX_SHOW_RESULTS ){
+										parts_addr.push('<option value="'+addr+'" loc="'+loc+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
 										parts_addr_count++;
 									}
 								} // if strict check
@@ -897,7 +542,7 @@ z(document).ready(function() {
 		}); // z('#checkout-step-billing #CountrySuggestions').autocomplete({
 		
 		
-		z("#StreetSuggestions").autocomplete({
+		z('#StreetSuggestions').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
 			delay: 			250,
@@ -953,45 +598,27 @@ z(document).ready(function() {
 							for (i in o) {
 							//	pc = o.PostalCodePrimary; 
 							//	lc = o.Locality;
-							//	addr		= o.DeliveryAddress;//o.Address;
-							//	aarea 		= o.AdministrativeArea;
+								addr = o.DeliveryAddress;//o.Address;
+								aarea = o.AdministrativeArea;
 								
-								addr 		= o.DeliveryAddress;//o.Address;
-								simpleaddr 	= o.DeliveryAddress;//o.Address;
-								loc 		= o.Locality;
-								pc 			= o.PostalCode;
-								pc_sec		= o.PostalCodeSecondary;
-								aarea 		= o.AdministrativeArea;
-								deliver 	= o.DeliveryAddress;
-								subbuilding = o.SubBuilding;
-								organization = o.Organization;
-								building	= o.Building;
-								premise		= o.Premise;
-								tn			= o.Thoroughfare;
-						
-								console.log("sub building:" +subbuilding);
-								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
-									if (parts_addr_count >= 0){
-										parts_addr.push('<option selected value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
-										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
-										parts_addr.push('<option value="'+addr+'" organization="'+organization+'" building="'+building+'" premise="'+premise+'" thoroughfare="'+tn+'" subbuilding="'+subbuilding+'" loc="'+loc+'" pc_sec="'+pc_sec+'" pc="'+pc+'" aarea="'+aarea+'" simpleaddr="'+simpleaddr+'" deliver="'+deliver+'">'+addr+'</option>');
-										parts_addr_count++;
-									}
-								} // if strict check
-						
-						/*		
 								//addr = o.DeliveryAddress;
 								if (((typeof addr != "undefined") && (typeof addr.valueOf() == "string")) && (addr.length > 0)) {
+								/*	console.log("addr:" +addr);
+									if (parts_addr_count >= 0){
+										parts_addr.push('<option selected value="'+addr+'">'+addr+'</option>');
+									} else {
+										parts_addr.push('<option value="'+addr+'">'+addr+'</option>');
+									}
+									parts_addr_count++;
+								*/
 									if (parts_addr_count >= 0){
 										parts_addr.push('<option selected value="'+addr+'" aarea="'+aarea+'">'+addr+'</option>');
 										parts_addr_count++;
-									} else if ( parts_addr_count >= 1 && parts_addr_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_addr_count >= 2 && parts_addr_count <= MAX_SHOW_RESULTS ){
 										parts_addr.push('<option value="'+addr+'" aarea="'+aarea+'">'+addr+'</option>');
 										parts_addr_count++;
 									}
 								} // if strict check
-						*/
 								if (typeof(o[i])=="object") {
 								//	console.log("key:" + i, "value:"+o[i])
 									//console.log("key:" + i.PostalCodePrimary, "value:"+o[i.PostalCodePrimary])
@@ -1015,7 +642,7 @@ z(document).ready(function() {
 		}); // z('#checkout-step-billing #CountrySuggestions').autocomplete({
 		
 		
-		z("#PostalCodeSuggestions").autocomplete({
+		z('#PostalCodeSuggestions').autocomplete({
 			showHeader: 	true, 
 			minLength: 		1, 
 			delay: 			250,
@@ -1059,33 +686,28 @@ z(document).ready(function() {
 						z("#showPostalCodeResults").show();
 
 						// reset array
-						parts_pc 	= [];
-												
+						parts_pc 		= [];
+						
 						function traversePC(o){
-							var pc 		= "";
-							var lc 		= "";
-							var aarea 	= "";
-							var cntry 	= z("#showCountryResults").find(":selected").val();
-							
+							var pc = "";
+							var lc = "";
+							var aarea = "";
 							for (i in o) {
-								//pc 		= o.PostalCodePrimary; // hier ansetzen: 
-								pc 		= o.PostalCode; 
+								pc 		= o.PostalCodePrimary; 
 								lc 		= o.Locality;
 								aarea 	= o.AdministrativeArea;
-								premise	= o.Premise;
 								
-								// fix from 8/2/2016
-								if ( cntry.match(/(GB|UK)/ig) != null){
-									pc	= o.PostalCodePrimary; 
-								}
-								
-								console.log("POSTALCOOOODEEE: " +pc+" locality: "+lc +"country: "+cntry);
+							//	var postalcode 	= z("#PostalCodeSuggestions").val();
+							//	var country 	= 	z("#showCountryResults").find(":selected").val();
+					
+								//console.log("POSTALCOOOODEEE: " +postalcode+" locality: "+lc +"country: "+country);
+								//console.log("i: " +i+"o: "+o);
 								if (((typeof pc != "undefined") && (typeof pc.valueOf() == "string")) && (pc.length > 0) && ((typeof lc != "undefined") && (typeof lc.valueOf() == "string")) && (lc.length > 0)) {
 									if (parts_pc_count >= 0){
-										parts_pc.push('<option selected value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
+										parts_pc.push('<option selected value="'+lc+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
-										parts_pc.push('<option value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
+										parts_pc.push('<option value="'+lc+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
 										parts_pc_count++;
 									}
 								} // if strict check
@@ -1110,7 +732,7 @@ z(document).ready(function() {
 			} // source: function( request, response ){
 		}); // z('#PostalCodeSuggestions').autocomplete({
 			
-		z("#CountrySuggestions").autocomplete({
+		z('#CountrySuggestions').autocomplete({
 			showHeader: true, 
 			minLength: 	1, 
 			delay: 		250,
@@ -1166,7 +788,7 @@ z(document).ready(function() {
 									if (parts_pc_count >= 0){
 										parts_pc.push('<option selected value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
 										parts_pc.push('<option value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
 									}
@@ -1193,7 +815,8 @@ z(document).ready(function() {
 				})
 			}
 		}); // z('#CountrySuggestions').autocomplete({
-				
+		
+		
 		z('#CountrySuggestionsSingleRow').autocomplete({
 			showHeader: true, 
 			minLength: 	1, 
@@ -1217,6 +840,8 @@ z(document).ready(function() {
 					
 						arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="10">');
 					
+						//arr_pc_options.push('<select style="width: '+MAX_LENGTH_GEE_FIELDED_BLOCK+'px;" size="'+MAX_SHOW_RESULTS+'">');
+						
 						var string 			= JSON.stringify(data);
 						var obj 			= z.parseJSON(string);
 						
@@ -1250,7 +875,7 @@ z(document).ready(function() {
 									if (parts_pc_count >= 0){
 										parts_pc.push('<option selected value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
-									} else if ( parts_pc_count >= 1 && parts_pc_count <= MAX_SHOW_RESULTS ){
+									} else if ( parts_pc_count >= 2 && parts_pc_count <= MAX_SHOW_RESULTS ){
 										parts_pc.push('<option value="'+iso+'">'+eng+'</option>');
 										parts_pc_count++;
 									}
@@ -1279,17 +904,13 @@ z(document).ready(function() {
 		}); // z('#CountrySuggestionsSingleRow').autocomplete({
 	
 	} // if (is_gee_enabled.indexOf("1") > -1){
-		
+	
+	
 	function doGawsWebCall(){
 
 		if (n_gaws !== true){
-			var resAne 		= "Global Address Verification is not enabled.";
-			z("#errorresults_top").append(resAne);
-			z("#errorresults_top").css("display", "block");
-			z("#errorresults_top").fadeOut(6800);
 			return;
-		} // if (n_gaws !== true){
-		
+		}
 		var resultquality 		= "";
 		var content_locality 	= z("#billing\\:city").val();
 		var content_postalcode 	= z("#billing\\:postcode").val();
@@ -1297,7 +918,6 @@ z(document).ready(function() {
 		var content_street2 	= z("#billing\\:street2").val();
 		var content_country 	= z("#billing\\:country_id").val();
 		var content_region 		= z("#billing\\:region_id").val();
-		//var content_subpremise	= z("#showAddressSubPremise").find(":selected").val();
 		
 		content_locality 		= z.trim(content_locality);
 		content_postalcode 		= z.trim(content_postalcode);
@@ -1306,12 +926,22 @@ z(document).ready(function() {
 		content_country 		= z.trim(content_country);
 		content_region 			= z.trim(content_region);
 		
-			console.log("doGawsWebCall [Live]: Locality:"+content_locality+" Street: "+content_street +" Street2: "+content_street2+" PostalCode: "+content_postalcode+" Country: "+content_country);
+		var cookiehash			= hashCode(content_locality)+hashCode(content_postalcode)+hashCode(content_street)+hashCode(content_street2)+hashCode(content_country);
+		var CookieAddrHash		= Cookies.get('MelissaDataMagento_GAWS_AddressHash');
+		
+		//console.log("doGawsWebCall [none]: Locality:"+content_locality+" Street: "+content_street+" PostalCode: "+content_postalcode+" Country: "+content_country);
+		//console.log("doGawsWebCall [none]: cookiehash: "+cookiehash);
+		//console.log("doGawsWebCall [none]: CookieAddrHash: "+CookieAddrHash);
+		
+		var randIdent = Math.random();
+		//if (content_locality.length >= 2 && content_postalcode.length >= 2 && content_street.length >= 2 && content_country.length >= 1 && cookiehash != CookieAddrHash){
+		if (content_locality.length >= 2 && content_postalcode.length >= 2 && content_street.length >= 2 && content_country.length >= 1){	
+			//console.log("doGawsWebCall [Live][tid: "+randIdent+"]: Locality:"+content_locality+" Street: "+content_street+" PostalCode: "+content_postalcode+" Country: "+content_country);
 			z.ajax({
 				type:     "GET",
 				url:      urlGaws_Real,
 				dataType: 'jsonp',
-				async: 		true, //true,
+				async: 		true,
 				cache: 		false,
 				data: {
 					id: 		my_gaws_token,	
@@ -1319,7 +949,7 @@ z(document).ready(function() {
 					format: 	"json",
 					ctry: 		content_country,
 					a1:			content_street,
-					a2:			content_street2,
+					//a2:			content_street2,
 					postal: 	content_postalcode,
 					loc:		content_locality,
 				},
@@ -1352,13 +982,19 @@ z(document).ready(function() {
 						var CountryISO3166_1_Alpha3 = obj2[0].CountryISO3166_1_Alpha3;
 						var CountryISO3166_1_Alpha2 = obj2[0].CountryISO3166_1_Alpha2;
 						var PremisesNumber	= obj2[0].PremisesNumber;
-						var SubPremisesNumber = obj2[0].SubPremisesNumber;
 						
 					//	console.log("doGawsWebCall [live][tid: "+randIdent+"] ResultCodes:" + ResultCodes + " FormAddr: "+ FormAddr);
-						if ( ResultCodes.match(/(AV23|AV24|AV25)/ig) != null ){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is a good address.";
+						
+						if ( ResultCodes.match(/(AE..)/ig) != null ){
+							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is not postal deliverable! <br />Please change your input address (Street, Premise, Suite, Locality, Postalcode)!";
+							html_result_gaws = '<span style="color: red; font-weight:bold;">'+resultquality+'</span>';
+						} else if ( ResultCodes.match(/(AV1|AE05|AV21|AV22)/ig) != null ){
+							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> has some errors in it! <br />Please consider checking your input (Street, Premise, Suite, Locality, Postalcode)!";
+							html_result_gaws = '<span style="color: orange; font-weight:bold;">'+resultquality+'</span>';
+						} else if ( ResultCodes.match(/(AV23|AV24|AV25)/ig) != null ){
+							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is fully postal deliverable! <br /> You are great!";
 							html_result_gaws = '<span style="color: green; font-weight:bold;">'+resultquality+'</span>';
-																					
+							
 							// if full verified GAWS address, then take that values and write them back
 							z("#billing\\:country_id").val(CountryISO3166_1_Alpha2);
 							z("#billing\\:street1").val(AddressLine1);
@@ -1366,58 +1002,95 @@ z(document).ready(function() {
 							z("#billing\\:city").val(Locality);
 							
 							// for special countries add the second AddressLine2 content
-							if ( CountryISO3166_1_Alpha2.match(/(GB|UK|US|AU|NL)/ig) != null && content_street2.length >= 2){
+							if ( CountryISO3166_1_Alpha2.match(/(GB|UK|US|AU|NL)/ig) != null ){
 								z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for GB, US, AU & NL
 							}
-							
-						/*
-							z.each(resCountry, function( index, value ) {
-								value = value.trim();
-								var iso = CountryISO3166_1_Alpha2.toLowerCase();
-								if (value.toLowerCase().indexOf(iso) != -1){
-									z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for resCountry like GB, US, AU & NL
-								} // if (value.toLowerCase().indexOf(iso) != -1){
-							}); // z.each(resCountry, function( index, value ) {
-						*/
-						} else if ( ResultCodes.match(/(AV1|AE05|AV21|AV22)/ig) != null ){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> may or may not be a deliverable. <br> Please verify the address input.";
-							html_result_gaws = '<span style="color: orange; font-weight:bold;">'+resultquality+'</span>';		
-						} else if ( ResultCodes.match(/(AE..)/ig) != null && ResultCodes.match(/(AE05)/ig) == null){
-							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> is a bad address. <br> Please double check the address input.";
-							html_result_gaws = '<span style="color: red; font-weight:bold;">'+resultquality+'</span>';
 						}
+												
 						z("#gawsresults_top").html("");
 						z("#gawsresults_top").html(html_result_gaws);
 						z("#gawsresults_top").css("display", "block");
-					} // success
+						
+			//			// set cookie -> no double GAWS calls
+			//			var unixtimestamp = Math.round(+new Date()/1000);
+			//			Cookies.set('MelissaDataMagento_GAWS_AddressHash', '', unixtimestamp-300);  
+			//			Cookies.remove('MelissaDataMagento_GAWS_AddressHash');
+			//			Cookies.set('MelissaDataMagento_GAWS_AddressHash', cookiehash);
+							
+						return 1;
+										
+						// later for each result code give the corresponding hint on what to improve for NON AV24/25 addresses
+						
+			/*				
+						z.each(ArrResultCodes, function( index, value ) {
+							value = value.trim();
+							if ( value.match(/AE/ig) != null ){
+								if (AEisDone==0){
+									AEisDone = 1;
+									tmpAdd = '<br /><b style="text-decoration: underline">Adressfehler:</b><br /><br />';
+								}								
+								stringToAddTemp = tmpAdd+"<li><b>"+value+"</b> -> "+errorcodes[value]['desc']+"</li>";
+								tmpAdd = "";
+							} else if ( value.match(/AV/ig) != null ){
+								if (AVisDone==0){
+									AVisDone = 1;
+									tmpAdd = '<br /><b style="text-decoration: underline">Validierungsebene:</b><br /><br />';
+								}
+								stringToAddTemp = tmpAdd+"<li><b>"+value+"</b> -> "+verifycodes[value]['desc']+"</li>";
+								tmpAdd = "";
+							}
+						
+							if ( value.match(/AE01/ig) != null ){ 
+								image_postalcode_notok = '<img alt="Nicht korrekt" title="Schlechte Ergebnisqualit\E4t" src="data:image/png;base64,'+red_notok+'"/>';
+							}
+							if ( value.match(/AE02/ig) != null ){ 
+								image_street_notok = '<img alt="Nicht korrekt" title="Schlechte Ergebnisqualit\E4t" src="data:image/png;base64,'+red_notok+'"/>';
+							}
+							if ( value.match(/AV13/ig) != null ){ 
+								image_street_notok = '<img alt="Gr\FCner Haken" title="Sehr gute Ergebnisse / Very good Quality" src="data:image/png;base64,'+green_ok+'"/>';
+							}
+							var n = stringToAddTemp.length;
+							if (n>3){
+								stringToAdd += stringToAddTemp;
+								stringToAddTemp = "";
+							}
+						});
+			*/			
+					} // success: function( data ){
 			}); // z.ajax({
 			return 0;
+		} // if (locality == 1 && street == 1 && postcode == 1 && country == 1){
+		return 0;
 	} // doGawsWebCall
 	
 	
 	function doEmailWebCall(){
 
 		if (n_email !== true){
-			var resEne 	= "Global Email Validation is not enabled.";
-			z("#errorresults_top").append(resEne);
-			z("#errorresults_top").css("display", "block");
-			z("#errorresults_top").fadeOut(6800);
 			return;
-		} // if (n_email !== true){
-				
-		var resultquality 	= "";
-		var content_email 	= z("#billing\\:email").val();
+		}
+		var resultquality 		= "";
+		var content_email 		= z("#billing\\:email").val();
 		
-		content_email 		= z.trim(content_email); //w@w.de is minimum
-	
+		content_email 			= z.trim(content_email); //w@w.de is minimum
+				
+		var cookiehash_email	= hashCode(content_email);
+		var CookieEmailHash		= Cookies.get('MelissaDataMagento_EMAIL_DataHash');
+		
 		var is_AtSign			= content_email.includes("@");
 		var is_DotSign			= content_email.includes(".");
-		
+				
+		//console.log("i am in email check phase");				
+		var randIdent = Math.random();
+		//if (content_email.length >= 6 && is_AtSign === true && is_DotSign === true && cookiehash_email != CookieEmailHash){
+		if (content_email.length >= 6 && is_AtSign === true && is_DotSign === true){	
+			//console.log("doEmailWebCall [Live][tid: "+randIdent+"]: Email: "+content_email);
+				
 			z.ajax({
-				type:     	"GET",
-				url:      	urlEmail_Real,
-				dataType: 	'jsonp',
-				async: 		true, //true,
+				type:     "GET",
+				url:      urlEmail_Real,
+				dataType: 'jsonp',
+				async: 		true,
 				cache: 		false,
 				data: {
 					id: 		my_email_token,	
@@ -1466,26 +1139,38 @@ z(document).ready(function() {
 
 						var retVal = 0;
 						if ( ResultCodes.match(/(EE01|EE02|EE03|EE04|ES02|ES03|ES04|ES05|ES06|ES09)/ig) != null ){ // red traffic light
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is not a deliverable Email address.";
+							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is not deliverable! <br />Please change your input Email address!";
 							html_result_email = ' <span style="color: red; font-weight:bold;">'+resultquality+'</span>';
 							retVal = 0;
 						} else if ( ResultCodes.match(/(ES07|ES08)/ig) != null || bad_email == 2 ){ // yellow traffic light
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> may or may not be deliverable. <br>  The ISP is an accept-all or does not allow real-time verification.";
+							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> might be a correct written Email, a Catch-All or Group Email Address! <br />Please change your input Email address!";
 							html_result_email = ' <span style="color: orange; font-weight:bold;">'+resultquality+'</span>';
 							retVal = 0;
 						} else if ( ResultCodes.match(/(ES01|ES20|ES21|ES22)/ig) != null && bad_email != 2 ){ // green traffic light -> removed ES20 on June 14th of 2016
-							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is found to be deliverable.";
+							resultquality = "eMail: <span style=\"text-decoration: underline;\">"+EmailAddress+"</span> is fully deliverable! <br /> Thats fantastic!";
 							html_result_email = ' <span style="color: green; font-weight:bold;">'+resultquality+'</span>';
 							retVal = 1;
 						}
 
+						// debug
+						//html_result_email = ResultCodes;
+						//console.log("doEmailWebCall [live][tid: "+randIdent+"] ResultCodes:" + ResultCodes + " EmailAddr: "+ EmailAddress);
+							
 						//z("#gawsresults_top").html("");
 						z("#gawsresults_top").append(html_result_email);
 						z("#gawsresults_top").css("display", "block");
-												
+						
+			//			// set cookie -> no double Email calls
+			//			var unixtimestamp = Math.round(+new Date()/1000);
+			//			//Cookies.remove('MelissaDataMagento_EMAIL_DataHash');  
+			//			Cookies.remove('MelissaDataMagento_EMAIL_DataHash', { expires: 1, path: '/' });  
+			//			Cookies.set('MelissaDataMagento_EMAIL_DataHash', cookiehash_email, { expires: 1, path: '/' });
+						
 						return retVal;
 					} // success: function( data ){
 			}); // z.ajax({
+			return -1;
+		}; // if (content_email.length >= 6 && is_AtSign === true && is_DotSign === true && cookiehash_email != CookieEmailHash){
 		return 0;
 	} // doEmailWebCall
 
@@ -1500,48 +1185,37 @@ z(document).ready(function() {
 		return hash;
 	} // function hashCode (str){
 	
-	// if user has clicked submit for doing Email & Gaws check
 	z("#submitCheck").click(function(){
-		var tmpEmail 	= doEmailWebCall(); // do Email processing
-		var tmpGaws 	= doGawsWebCall(); 	// do GAWS processing		  
-	}); // z("#submitCheck").click(function(){
-	
-	// if user has clicked continue to save billing information
-	z("#billing-buttons-container .button").click(function(){
+		var resE 		= "eMail Check not possible - not all required Elements of an eMail given!";
+		var resA 		= "Address Verification not possible - not all needed Elements of Address Check are given!";
+		var html_res 	= "";
 		
-		var content_locality 	= z("#billing\\:city").val();
-		var content_postalcode 	= z("#billing\\:postcode").val();
-		var content_street 		= z("#billing\\:street1").val();
-		var content_country 	= z("#billing\\:country_id").val();
+		var retEmail 	= doEmailWebCall(); // do the Email processing
+		var retGaws 	= doGawsWebCall(); // do GAWS processing
 		
-		var content_firstname	= z("#billing\\:firstname").val();
-		var content_lastname 	= z("#billing\\:lastname").val();
-		var content_email 		= z("#billing\\:email").val();
+	// debug	
+	//z("#gawsresults_top").html("emailretval:"+retEmail+" > gawsretval:"+retGaws);
+	//	z("#gawsresults_top").css("display", "block");		        
+	//return;	
 		
-		var is_AtSign			= content_email.includes("@");
-		var is_DotSign			= content_email.includes(".");
-		
-		if (content_locality.length >= 2 && content_postalcode.length >= 2 && content_street.length >= 2 && content_country.length >= 1 && content_email.length >= 6 && is_AtSign === true && is_DotSign === true){	
-						
-			z("#autocomplete_melissadata_fielded").hide();
-			z("#autocomplete_melissadata_singlerow").hide();
-			z("#autocomplete_melissadata_fielded").css("display", "none");		
-			z("#autocomplete_melissadata_singlerow").css("display", "none");
-			
-			z("#singleShow").hide();
-			z("#singleShow").css("display", "none");		
-			z("#multiShow").hide();
-			z("#multiShow").css("display", "none");		
-			
-			z("#gawsresults_top").hide();
-			z("#gawsresults_top").css("display", "none");		
-			
-			z("#submitCheck").hide();
-			z("#submitCheck").css("display", "none");		
-						
-			//alert("Button pressed");
-			
-		} // if check
+		if (retGaws == -1 || retEmail == -1){
+			// stay calm
+		} else if (retGaws == 1 && retEmail == 1){ // both valid
+			// everything is ok
+		} else if (retGaws == 1  && retEmail == 0){ // GAws valid and Email not
+			html_res = ' <span style="color: orange; font-weight:bold;">'+resE+'</span>';       
+		} else if (retEmail == 1 && retGaws == 0){ // Email valid and Gaws not
+			html_res = ' <span style="color: orange; font-weight:bold;">'+resA+'</span>';       
+		} else if (retGaws == 0 && retEmail == 0){ // both invalid
+			html_res = '<span style="color: orange; font-weight:bold;">'+resE+"<br />"+resA+'</span>';	       
+		} else if (retGaws == 0){ // never reached
+			html_res = '<span style="color: orange; font-weight:bold;">'+resA+'</span>';	       
+		} else if (retEmail == 0){ // never reached
+			html_res = '<span style="color: orange; font-weight:bold;">'+resE+'</span>';
+		}
+		z("#errorresults_top").html(html_res);
+		z("#errorresults_top").css("display", "block");
+		z("#errorresults_top").fadeOut(6800);		   
 	}); // z("#submitCheck").click(function(){
 	
 }); // $(document).ready(function() {
