@@ -3,7 +3,7 @@ Melissa Data Javascript Library for Magento Plugin
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-01//10:30pm
+Last Modified: 	2016-08-02//10:30pm
 */
 
 //$.noConflict();
@@ -1052,19 +1052,27 @@ z(document).ready(function() {
 						z("#showPostalCodeResults").show();
 
 						// reset array
-						parts_pc 		= [];
-						
+						parts_pc 	= [];
+												
 						function traversePC(o){
-							var pc = "";
-							var lc = "";
-							var aarea = "";
+							var pc 		= "";
+							var lc 		= "";
+							var aarea 	= "";
+							var cntry 	= z("#showCountryResults").find(":selected").val();
+							
 							for (i in o) {
 								//pc 		= o.PostalCodePrimary; // hier ansetzen: 
 								pc 		= o.PostalCode; 
 								lc 		= o.Locality;
 								aarea 	= o.AdministrativeArea;
 								premise	= o.Premise;
-								//console.log("POSTALCOOOODEEE: " +postalcode+" locality: "+lc +"country: "+country);
+								
+								// fix from 8/2/2016
+								if ( cntry.match(/(GB|UK)/ig) != null){
+									pc	= o.PostalCodePrimary; 
+								}
+								
+								console.log("POSTALCOOOODEEE: " +pc+" locality: "+lc +"country: "+cntry);
 								if (((typeof pc != "undefined") && (typeof pc.valueOf() == "string")) && (pc.length > 0) && ((typeof lc != "undefined") && (typeof lc.valueOf() == "string")) && (lc.length > 0)) {
 									if (parts_pc_count >= 0){
 										parts_pc.push('<option selected value="'+lc+'" premise="'+premise+'" pc="'+pc+'" aarea="'+aarea+'">'+pc+", "+lc+'</option>');
@@ -1351,9 +1359,11 @@ z(document).ready(function() {
 							z("#billing\\:city").val(Locality);
 							
 							// for special countries add the second AddressLine2 content
-							//if ( CountryISO3166_1_Alpha2.match(/(GB|UK|US|AU|NL)/ig) != null ){
-							//	z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for GB, US, AU & NL
-							//}
+							if ( CountryISO3166_1_Alpha2.match(/(GB|UK|US|AU|NL)/ig) != null && content_street2.length >= 2){
+								z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for GB, US, AU & NL
+							}
+							
+						/*
 							z.each(resCountry, function( index, value ) {
 								value = value.trim();
 								var iso = CountryISO3166_1_Alpha2.toLowerCase();
@@ -1361,6 +1371,7 @@ z(document).ready(function() {
 									z("#billing\\:street2").val(AddressLine2); // show AddressLine2 only for resCountry like GB, US, AU & NL
 								} // if (value.toLowerCase().indexOf(iso) != -1){
 							}); // z.each(resCountry, function( index, value ) {
+						*/
 						} else if ( ResultCodes.match(/(AV1|AE05|AV21|AV22)/ig) != null ){
 							resultquality = "Address: <span style=\"text-decoration: underline;\">"+FormAddr+"</span> may or may not be a deliverable. <br> Please verify the address input.";
 							html_result_gaws = '<span style="color: orange; font-weight:bold;">'+resultquality+'</span>';		

@@ -6,14 +6,14 @@ Melissa Data Plugin for Magento: Config XML Library
 Author: 		Sebastian Enger, M.Sc. //"Liebe besiegt Alles".
 Contact:		Sebastian.Enger@MelissaData.com
 Phone: 			+49 30 80 933 178-2 
-Last Modified: 	2016-08-01//10:30pm
+Last Modified: 	2016-08-02//10:30pm
 */
 -->
 
 <config>
      <modules>
         <Melissa_Plugin>
-         <version>1.1.8</version>
+         <version>1.1.9</version>
           <depends>
             <!-- no dependencies -->
             </depends>
@@ -22,7 +22,7 @@ Last Modified: 	2016-08-01//10:30pm
 	<default>
 		<catalog>
 			<backend>                
-				<version>1.1.8</version>
+				<version>1.1.9</version>
 				<gaws>1</gaws>       
 				<gee>1</gee>
 				<email>1</email>
